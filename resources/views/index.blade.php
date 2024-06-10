@@ -14,7 +14,7 @@
     <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="16x16">
 
     <!--title-->
-    <title>GroStore - Autoparthub Automotive eCommerce Website</title>
+    <title>Autoparthub Automotive eCommerce Website</title>
 
     <!--build:css-->
     <link rel="stylesheet" href="css/main.css">
@@ -22,14 +22,39 @@
     <!-- endbuild -->
 
 </head>
+<style>
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            opacity:1;
+            transition: opacity 1s ease-out;
+        }
+        .alert-success {
+            color: #3c763d;
+            background-color: #dff0d8;
+            border-color: #d6e9c6;
+        }
+        .fade-out{
+            opacity:0
+        }
+    </style>
+@if (session('message'))
+        <div class="alert alert-success text-center" id="flash-message">
+            {{ session('message') }}
+        </div>
+    @endif
     <div class="main-wrapper">
         @include('footerheader.header')
+        
         <!--offcanvas menu start-->
         <div class="offcanvas_menu position-fixed">
             <div class="tt-short-info d-none d-md-none d-lg-none d-xl-block">
                 <button class="offcanvas-close"><i class="fa-solid fa-xmark"></i></button>
                 <a href="#" class="logo-wrapper d-inline-block mb-5"><img src="storage/logo.png" alt="logo" /></a>
                 <div class="offcanvas-content">
+                
                     <h4 class="mb-4">About Us</h4>
                     <p>
                         Explain to you how all this mistaken denouncing pleasure and praising pain was born and we will give you
@@ -76,22 +101,13 @@
                             </ul>
                         </li>
                         <li class="has-submenu">
-                            <a href="javascript:void(0)">Blog<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
-                            <ul>
-                                <li><a href="{{ route('blog-grid') }}">Blog Grid</a></li>
-                                <li><a href="{{ route('blog-listing') }}">Blog List</a></li>
-                                <li><a href="{{ route('blog-details') }}">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
                             <a href="javascript:void(0)">Pages<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
                             <ul>
                                 <li><a href="{{ route('about') }}">About Us</a></li>
-                                        <li><a href="{{ url('/my-account') }}">My Account</a></li>
+                                <li><a href="{{ url('/my-account') }}">My Account</a></li>
                                 <li><a href="{{ route('cart') }}">Cart</a></li>
                                 <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
                                 <li><a href="{{ route('checkout') }}">Checkout</a></li>
-                                <li><a href="{{ route('invoice') }}">Invoice</a></li>
                                 <li><a href="{{ route('contact') }}">Contact</a></li>
                                 <li><a href="{{ route('team') }}">Team</a></li>
                                 <li><a href="{{ route('login') }}">Login</a></li>
@@ -217,7 +233,7 @@
 
         <!--category section start-->
         <section class="gshop-category-section bg-white pt-120 position-relative z-1 overflow-hidden">
-            <img src="storage/bg-shape.png" alt="bg shape" class="position-absolute bottom-0 start-0 w-100 z--1">
+
             <div class="container">
                 <div class="gshop-category-box border-secondary rounded-3 bg-white">
                     <div class="text-center section-title">
@@ -290,7 +306,7 @@
         </section> <!--category section end-->
 
         <!--featured products start-->
-        <section class="featured-products pt-120 pb-200 bg-shade position-relative overflow-hidden z-1">
+        <!-- <section class="featured-products pt-120 pb-200 bg-shade position-relative overflow-hidden z-1">
             <img src="storage/owheel.png" alt="roll" class="position-absolute roll-1 z--1" data-parallax='{"y": -120}'>
             <img src="storage/ooils.png" alt="roll" class="position-absolute roll-2 z--1" data-parallax='{"y": 120}'>
             <div class="container">
@@ -584,13 +600,11 @@
                 </div>
             </div>
             <img src="storage/bg-shape-2.png" alt="bg shape" class="position-absolute start-0 bottom-0 w-100 z--1">
-        </section> <!--featured products end-->
+        </section> featured products end -->
 
-        <!--trending products start-->
+        <!--trending products start
         <section class="pt-8 pb-100 bg-white position-relative overflow-hidden z-1 trending-products-area">
-            <img src="storage/ogauge.png" alt="gauge" class="position-absolute garlic z--1" data-parallax='{"y": 100}'>
-            <img src="storage/omuffler.png" alt="muffler" class="position-absolute carrot z--1" data-parallax='{"y": -100}'>
-            <img src="storage/ooil-filters.png" alt="filters" class="position-absolute mashrom z--1" data-parallax='{"x": 100}'>
+
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-xl-5">
@@ -764,11 +778,14 @@
                     </div>
                 </div>
             </div>
-        </section> <!--trending products end-->
+        </section> trending products end-->
 
         <!--banner section start-->
-        <section class="banner-section position-relative z-1 overflow-hidden bg-white pt-2">
+        <section class="banner-section position-relative z-1 mt-5 pt-5 overflow-hidden bg-white pt-2">
             <img src="storage/bg-shape-3.png" alt="bg shape" class="position-absolute start-0 bottom-0 z--1 w-100">
+            <img src="storage/ogauge.png" alt="gauge" class="position-absolute garlic z--1" data-parallax='{"y": 150}'>
+            <img src="storage/omuffler.png" alt="muffler" class="position-absolute carrot z--1" data-parallax='{"y": -100}'>
+            <img src="storage/ooil-filters.png" alt="filters" class="position-absolute mashrom z--1" data-parallax='{"x": 2000}'>
             <div class="container">
                 <div class="row align-items-center g-4 justify-content-center">
                     <div class="col-xl-4 col-md-6">
@@ -799,10 +816,11 @@
                     </div>
                 </div>
             </div>
-        </section> <!--banner section end-->
+        </section> 
+        <!-- banner section end -->
 
         <!--best deals start-->
-        <section class="pb-120 position-relative z-1 pt-120">
+        <!-- <section class="pb-120 position-relative z-1 pt-120">
             <div class="container">
                 <div class="row g-4 align-items-center justify-content-center">
                     <div class="col-xxl-4 col-xl-5 order-2 order-xxl-1">
@@ -820,7 +838,7 @@
                     <div class="col-xxl-8 order-1 order-xxl-2">
                         <div class="timing-box d-flex align-items-center justify-content-center justify-content-sm-between rounded-3 flex-wrap gap-3">
                             <h4 class="mb-0">Weekly Best Deals</h4>
-                            <ul class="timing-countdown countdown-timer d-flex align-items-center gap-2" data-date="06/30/2023 23:59:59">
+                            <ul class="timing-countdown countdown-timer d-flex align-items-center gap-2" data-date="06/10/2024 13:00:00">
                                 <li class="position-relative z-1 d-flex align-items-center justify-content-center flex-column rounded-2">
                                     <h5 class="mb-0 days">24</h5>
                                     <span class="gshop-subtitle fs-xxs d-block">Days</span>
@@ -982,23 +1000,18 @@
                     </div>
                 </div>
             </div>
-        </section> <!--best deals end-->
+        </section> best deals end -->
 
         <!--banner section start-->
-        <section class="banner-section position-relative z-1 overflow-hidden">
+        <section class="banner-section position-relative mt-5 pt-5 z-1 overflow-hidden">
             <img src="storage/bg-shape-4.png" alt="bg shape" class="position-absolute start-0 bottom-0 w-100 z--1">
             <div class="container">
                 <div class="row g-4">
-                    <div class="col-xl-8">
+                    <div class="col-xl-12">
                         <div class="banner-box background-banner rounded-2 banner-lg" data-background="storage/banner.png">
                             <span class="badge bg-danger mb-2">Top Offer</span>
                             <h3 class="mb-6 text-white gshop-title">High Quality & Affordable<br class="d-none d-sm-block"> Items <mark class="position-relative text-secondary position-relative bg-transparent">Special Offer<img src="storage/border-line.png" class="position-absolute start-0 border-line w-100" alt="border line"></mark></h3>
-                            <a href="{{ route('index') }}" class="btn btn-secondary btn-md">Shop Now<span class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-4">
-                        <div class="banner-img rounded-3 overflow-hidden">
-                            <img src="storage/banner-3.png" alt="banner" class="img-fluid">
+                            <a href="{{ route('shop-grid') }}" class="btn btn-secondary btn-md">Shop Now<span class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -1107,439 +1120,8 @@
             </div>
         </section> <!--feedback section end-->
 
-        <!--products listing start-->
-        <section class="pt-80 pb-120">
-            <div class="container">
-                <div class="row justify-content-center g-4">
-                    <div class="col-xxl-4 col-lg-6">
-                        <div class="product-listing-box bg-white">
-                            <div class="d-flex align-items-center justify-content-between gap-3 mb-5 flex-wrap">
-                                <h4 class="mb-0">New Products</h4>
-                                <a href="{{ route('shop-grid') }}" class="explore-btn text-secondary fw-bold">View More<span class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
-                            </div>
-                            <div class="horizontal-product-card d-sm-flex align-items-center p-3 bg-white rounded-2 mt-3 border card-md gap-4">
-                                <div class="thumbnail position-relative rounded-2">
-                                    <a href="{{ route('index') }}"><img src="storage/ebc.png" alt="product" class="img-fluid"></a>
-                                    <div class="product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-1 rounded-2">
-                                        <a href="#" class="rounded-btn fs-xs"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="#quickview_modal" data-bs-toggle="modal" class="rounded-btn fs-xs"><i class="fa-solid fa-eye"></i></a>
-                                        <a href="#" class="rounded-btn fs-xs">
-                                            <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.86193 0.189422C9.62476 0.422214 9.62476 0.799637 9.86193 1.03243L10.6472 1.80311H7.25462C5.91292 1.80311 4.82521 2.87064 4.82521 4.18749V4.78359C4.82521 5.11281 5.09713 5.37968 5.43256 5.37968C5.768 5.37968 6.03991 5.11281 6.03991 4.78359V4.18749C6.03991 3.52906 6.58374 2.9953 7.25462 2.9953H10.6472L9.86193 3.76599C9.62476 3.99877 9.62476 4.37622 9.86193 4.60899C10.0991 4.84177 10.4837 4.84177 10.7208 4.60899L12.5429 2.82071C12.7801 2.58792 12.7801 2.2105 12.5429 1.9777L10.7208 0.189422C10.4837 -0.0433652 10.0991 -0.0433652 9.86193 0.189422ZM7.86197 4.18749C7.52653 4.18749 7.25462 4.45436 7.25462 4.78359V5.37968C7.25462 6.03813 6.7108 6.57187 6.03991 6.57187H2.64736L3.43261 5.80118C3.66979 5.5684 3.66979 5.19096 3.43261 4.95818C3.19542 4.72541 2.81087 4.72541 2.57368 4.95818L0.751618 6.74647C0.514435 6.97924 0.514435 7.35669 0.751618 7.58946L2.57368 9.37775C2.81087 9.61052 3.19542 9.61052 3.43261 9.37775C3.66979 9.14497 3.66979 8.76752 3.43261 8.53475L2.64736 7.76406H6.03991C7.38162 7.76406 8.46933 6.69651 8.46933 5.37968V4.78359C8.46933 4.45436 8.19742 4.18749 7.86197 4.18749Z" fill="#5D6374"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-content mt-4 mt-sm-0">
-                                    <div class="d-flex align-items-center flex-nowrap star-rating">
-                                        <ul class="d-flex align-items-center me-2">
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <span class="flex-shrink-0">(5.2k Reviews)</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fw-bold text-heading title d-block fs-sm">EBC Big Brake Kits</a>
-                                    <div class="pricing mt-2">
-                                        <span class="fw-bold h4 deleted me-1">Rp. 240.000</span>
-                                        <span class="fw-bold h4 text-danger">Rp. 140.000</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fs-xs fw-bold mt-10 d-inline-block explore-btn">Shop Now<span class="ms-1"><i class="fa-solid fa-arrow-right"></i></span></a>
-                                </div>
-                            </div>
-                            <div class="horizontal-product-card d-sm-flex align-items-center p-3 bg-white rounded-2 mt-3 border card-md gap-4">
-                                <div class="thumbnail position-relative rounded-2">
-                                    <a href="{{ route('index') }}"><img src="storage/nrg.png" alt="product" class="img-fluid"></a>
-                                    <div class="product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-1 rounded-2">
-                                        <a href="#" class="rounded-btn fs-xs"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="#quickview_modal" data-bs-toggle="modal" class="rounded-btn fs-xs"><i class="fa-solid fa-eye"></i></a>
-                                        <a href="#" class="rounded-btn fs-xs">
-                                            <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.86193 0.189422C9.62476 0.422214 9.62476 0.799637 9.86193 1.03243L10.6472 1.80311H7.25462C5.91292 1.80311 4.82521 2.87064 4.82521 4.18749V4.78359C4.82521 5.11281 5.09713 5.37968 5.43256 5.37968C5.768 5.37968 6.03991 5.11281 6.03991 4.78359V4.18749C6.03991 3.52906 6.58374 2.9953 7.25462 2.9953H10.6472L9.86193 3.76599C9.62476 3.99877 9.62476 4.37622 9.86193 4.60899C10.0991 4.84177 10.4837 4.84177 10.7208 4.60899L12.5429 2.82071C12.7801 2.58792 12.7801 2.2105 12.5429 1.9777L10.7208 0.189422C10.4837 -0.0433652 10.0991 -0.0433652 9.86193 0.189422ZM7.86197 4.18749C7.52653 4.18749 7.25462 4.45436 7.25462 4.78359V5.37968C7.25462 6.03813 6.7108 6.57187 6.03991 6.57187H2.64736L3.43261 5.80118C3.66979 5.5684 3.66979 5.19096 3.43261 4.95818C3.19542 4.72541 2.81087 4.72541 2.57368 4.95818L0.751618 6.74647C0.514435 6.97924 0.514435 7.35669 0.751618 7.58946L2.57368 9.37775C2.81087 9.61052 3.19542 9.61052 3.43261 9.37775C3.66979 9.14497 3.66979 8.76752 3.43261 8.53475L2.64736 7.76406H6.03991C7.38162 7.76406 8.46933 6.69651 8.46933 5.37968V4.78359C8.46933 4.45436 8.19742 4.18749 7.86197 4.18749Z" fill="#5D6374"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-content mt-4 mt-sm-0">
-                                    <div class="d-flex align-items-center flex-nowrap star-rating">
-                                        <ul class="d-flex align-items-center me-2">
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <span class="flex-shrink-0">(5.2k Reviews)</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fw-bold text-heading title d-block fs-sm">NRG Quick Release Kit</a>
-                                    <div class="pricing mt-2">
-                                        <span class="fw-bold h4 deleted me-1">Rp. 240.000</span>
-                                        <span class="fw-bold h4 text-danger">Rp. 140.000</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fs-xs fw-bold mt-10 d-inline-block explore-btn">Shop Now<span class="ms-1"><i class="fa-solid fa-arrow-right"></i></span></a>
-                                </div>
-                            </div>
-                            <div class="horizontal-product-card d-sm-flex align-items-center p-3 bg-white rounded-2 mt-3 border card-md gap-4">
-                                <div class="thumbnail position-relative rounded-2">
-                                    <a href="{{ route('index') }}"><img src="https://throtl.com/cdn/shop/products/4271b5f34b0852a94aac6e83ac768298_750x.jpg?v=1705665640" alt="product" class="img-fluid"></a>
-                                    <div class="product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-1 rounded-2">
-                                        <a href="#" class="rounded-btn fs-xs"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="#quickview_modal" data-bs-toggle="modal" class="rounded-btn fs-xs"><i class="fa-solid fa-eye"></i></a>
-                                        <a href="#" class="rounded-btn fs-xs">
-                                            <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.86193 0.189422C9.62476 0.422214 9.62476 0.799637 9.86193 1.03243L10.6472 1.80311H7.25462C5.91292 1.80311 4.82521 2.87064 4.82521 4.18749V4.78359C4.82521 5.11281 5.09713 5.37968 5.43256 5.37968C5.768 5.37968 6.03991 5.11281 6.03991 4.78359V4.18749C6.03991 3.52906 6.58374 2.9953 7.25462 2.9953H10.6472L9.86193 3.76599C9.62476 3.99877 9.62476 4.37622 9.86193 4.60899C10.0991 4.84177 10.4837 4.84177 10.7208 4.60899L12.5429 2.82071C12.7801 2.58792 12.7801 2.2105 12.5429 1.9777L10.7208 0.189422C10.4837 -0.0433652 10.0991 -0.0433652 9.86193 0.189422ZM7.86197 4.18749C7.52653 4.18749 7.25462 4.45436 7.25462 4.78359V5.37968C7.25462 6.03813 6.7108 6.57187 6.03991 6.57187H2.64736L3.43261 5.80118C3.66979 5.5684 3.66979 5.19096 3.43261 4.95818C3.19542 4.72541 2.81087 4.72541 2.57368 4.95818L0.751618 6.74647C0.514435 6.97924 0.514435 7.35669 0.751618 7.58946L2.57368 9.37775C2.81087 9.61052 3.19542 9.61052 3.43261 9.37775C3.66979 9.14497 3.66979 8.76752 3.43261 8.53475L2.64736 7.76406H6.03991C7.38162 7.76406 8.46933 6.69651 8.46933 5.37968V4.78359C8.46933 4.45436 8.19742 4.18749 7.86197 4.18749Z" fill="#5D6374"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-content mt-4 mt-sm-0">
-                                    <div class="d-flex align-items-center flex-nowrap star-rating">
-                                        <ul class="d-flex align-items-center me-2">
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <span class="flex-shrink-0">(5.2k Reviews)</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fw-bold text-heading title d-block fs-sm">EBC Big Brake Kits</a>
-                                    <div class="pricing mt-2">
-                                        <span class="fw-bold h4 deleted me-1">Rp. 240.000</span>
-                                        <span class="fw-bold h4 text-danger">Rp. 140.000</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fs-xs fw-bold mt-10 d-inline-block explore-btn">Shop Now<span class="ms-1"><i class="fa-solid fa-arrow-right"></i></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-4 col-lg-6">
-                        <div class="product-listing-box bg-white">
-                            <div class="d-flex align-items-center justify-content-between gap-3 mb-5 flex-wrap">
-                                <h4 class="mb-0">Hot Deals of Month</h4>
-                                <a href="#" class="explore-btn text-secondary fw-bold">View More<span class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
-                            </div>
-                            <div class="horizontal-product-card d-sm-flex align-items-center p-3 bg-white rounded-2 mt-3 border card-md gap-4">
-                                <div class="thumbnail position-relative rounded-2">
-                                    <a href="{{ route('index') }}"><img src="https://down-id.img.susercontent.com/file/id-11134207-7qukw-lhonlbgxz7mcdb" alt="product" class="img-fluid"></a>
-                                    <div class="product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-1 rounded-2">
-                                        <a href="#" class="rounded-btn fs-xs"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="#quickview_modal" data-bs-toggle="modal" class="rounded-btn fs-xs"><i class="fa-solid fa-eye"></i></a>
-                                        <a href="#" class="rounded-btn fs-xs">
-                                            <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.86193 0.189422C9.62476 0.422214 9.62476 0.799637 9.86193 1.03243L10.6472 1.80311H7.25462C5.91292 1.80311 4.82521 2.87064 4.82521 4.18749V4.78359C4.82521 5.11281 5.09713 5.37968 5.43256 5.37968C5.768 5.37968 6.03991 5.11281 6.03991 4.78359V4.18749C6.03991 3.52906 6.58374 2.9953 7.25462 2.9953H10.6472L9.86193 3.76599C9.62476 3.99877 9.62476 4.37622 9.86193 4.60899C10.0991 4.84177 10.4837 4.84177 10.7208 4.60899L12.5429 2.82071C12.7801 2.58792 12.7801 2.2105 12.5429 1.9777L10.7208 0.189422C10.4837 -0.0433652 10.0991 -0.0433652 9.86193 0.189422ZM7.86197 4.18749C7.52653 4.18749 7.25462 4.45436 7.25462 4.78359V5.37968C7.25462 6.03813 6.7108 6.57187 6.03991 6.57187H2.64736L3.43261 5.80118C3.66979 5.5684 3.66979 5.19096 3.43261 4.95818C3.19542 4.72541 2.81087 4.72541 2.57368 4.95818L0.751618 6.74647C0.514435 6.97924 0.514435 7.35669 0.751618 7.58946L2.57368 9.37775C2.81087 9.61052 3.19542 9.61052 3.43261 9.37775C3.66979 9.14497 3.66979 8.76752 3.43261 8.53475L2.64736 7.76406H6.03991C7.38162 7.76406 8.46933 6.69651 8.46933 5.37968V4.78359C8.46933 4.45436 8.19742 4.18749 7.86197 4.18749Z" fill="#5D6374"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-content mt-4 mt-sm-0">
-                                    <div class="d-flex align-items-center flex-nowrap star-rating">
-                                        <ul class="d-flex align-items-center me-2">
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <span class="flex-shrink-0">(5.2k Reviews)</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fw-bold text-heading title d-block fs-sm">Little Trees Vanilla Strawberry XTRA STRENGTH</a>
-                                    <div class="pricing mt-2">
-                                        <span class="fw-bold h4 deleted me-1">Rp. 20.000</span>
-                                        <span class="fw-bold h4 text-danger">Rp. 20.000</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fs-xs fw-bold mt-10 d-inline-block explore-btn">Shop Now<span class="ms-1"><i class="fa-solid fa-arrow-right"></i></span></a>
-                                </div>
-                            </div>
-                            <div class="horizontal-product-card d-sm-flex align-items-center p-3 bg-white rounded-2 mt-3 border card-md gap-4">
-                                <div class="thumbnail position-relative rounded-2">
-                                    <a href="{{ route('index') }}"><img src="https://throtl.com/cdn/shop/products/314afd2a-4225-42ee-8c9b-b14f479fc6e6-800_550x.jpg?v=1680018377" alt="product" class="img-fluid"></a>
-                                    <div class="product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-1 rounded-2">
-                                        <a href="#" class="rounded-btn fs-xs"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="#quickview_modal" data-bs-toggle="modal" class="rounded-btn fs-xs"><i class="fa-solid fa-eye"></i></a>
-                                        <a href="#" class="rounded-btn fs-xs">
-                                            <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.86193 0.189422C9.62476 0.422214 9.62476 0.799637 9.86193 1.03243L10.6472 1.80311H7.25462C5.91292 1.80311 4.82521 2.87064 4.82521 4.18749V4.78359C4.82521 5.11281 5.09713 5.37968 5.43256 5.37968C5.768 5.37968 6.03991 5.11281 6.03991 4.78359V4.18749C6.03991 3.52906 6.58374 2.9953 7.25462 2.9953H10.6472L9.86193 3.76599C9.62476 3.99877 9.62476 4.37622 9.86193 4.60899C10.0991 4.84177 10.4837 4.84177 10.7208 4.60899L12.5429 2.82071C12.7801 2.58792 12.7801 2.2105 12.5429 1.9777L10.7208 0.189422C10.4837 -0.0433652 10.0991 -0.0433652 9.86193 0.189422ZM7.86197 4.18749C7.52653 4.18749 7.25462 4.45436 7.25462 4.78359V5.37968C7.25462 6.03813 6.7108 6.57187 6.03991 6.57187H2.64736L3.43261 5.80118C3.66979 5.5684 3.66979 5.19096 3.43261 4.95818C3.19542 4.72541 2.81087 4.72541 2.57368 4.95818L0.751618 6.74647C0.514435 6.97924 0.514435 7.35669 0.751618 7.58946L2.57368 9.37775C2.81087 9.61052 3.19542 9.61052 3.43261 9.37775C3.66979 9.14497 3.66979 8.76752 3.43261 8.53475L2.64736 7.76406H6.03991C7.38162 7.76406 8.46933 6.69651 8.46933 5.37968V4.78359C8.46933 4.45436 8.19742 4.18749 7.86197 4.18749Z" fill="#5D6374"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-content mt-4 mt-sm-0">
-                                    <div class="d-flex align-items-center flex-nowrap star-rating">
-                                        <ul class="d-flex align-items-center me-2">
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <span class="flex-shrink-0">(5.2k Reviews)</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fw-bold text-heading title d-block fs-sm">HKS SUPER FIRE RACING M40</a>
-                                    <div class="pricing mt-2">
-                                        <span class="fw-bold h4 deleted me-1">Rp. 198.000</span>
-                                        <span class="fw-bold h4 text-danger">Rp. 168.000</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fs-xs fw-bold mt-10 d-inline-block explore-btn">Shop Now<span class="ms-1"><i class="fa-solid fa-arrow-right"></i></span></a>
-                                </div>
-                            </div>
-                            <div class="horizontal-product-card d-sm-flex align-items-center p-3 bg-white rounded-2 mt-3 border card-md gap-4">
-                                <div class="thumbnail position-relative rounded-2">
-                                    <a href="{{ route('index') }}"><img src="https://throtl.com/cdn/shop/products/b19659c52cd902b8f1bc8e6cf21db1c1_bea60a08-5a4f-49b2-8260-14647f19715a_750x.jpg?v=1627501532" alt="product" class="img-fluid"></a>
-                                    <div class="product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-1 rounded-2">
-                                        <a href="#" class="rounded-btn fs-xs"><i class="fa-regular fa-heart"></i></a>
-                                        <a href="#quickview_modal" data-bs-toggle="modal" class="rounded-btn fs-xs"><i class="fa-solid fa-eye"></i></a>
-                                        <a href="#" class="rounded-btn fs-xs">
-                                            <svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.86193 0.189422C9.62476 0.422214 9.62476 0.799637 9.86193 1.03243L10.6472 1.80311H7.25462C5.91292 1.80311 4.82521 2.87064 4.82521 4.18749V4.78359C4.82521 5.11281 5.09713 5.37968 5.43256 5.37968C5.768 5.37968 6.03991 5.11281 6.03991 4.78359V4.18749C6.03991 3.52906 6.58374 2.9953 7.25462 2.9953H10.6472L9.86193 3.76599C9.62476 3.99877 9.62476 4.37622 9.86193 4.60899C10.0991 4.84177 10.4837 4.84177 10.7208 4.60899L12.5429 2.82071C12.7801 2.58792 12.7801 2.2105 12.5429 1.9777L10.7208 0.189422C10.4837 -0.0433652 10.0991 -0.0433652 9.86193 0.189422ZM7.86197 4.18749C7.52653 4.18749 7.25462 4.45436 7.25462 4.78359V5.37968C7.25462 6.03813 6.7108 6.57187 6.03991 6.57187H2.64736L3.43261 5.80118C3.66979 5.5684 3.66979 5.19096 3.43261 4.95818C3.19542 4.72541 2.81087 4.72541 2.57368 4.95818L0.751618 6.74647C0.514435 6.97924 0.514435 7.35669 0.751618 7.58946L2.57368 9.37775C2.81087 9.61052 3.19542 9.61052 3.43261 9.37775C3.66979 9.14497 3.66979 8.76752 3.43261 8.53475L2.64736 7.76406H6.03991C7.38162 7.76406 8.46933 6.69651 8.46933 5.37968V4.78359C8.46933 4.45436 8.19742 4.18749 7.86197 4.18749Z" fill="#5D6374"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="card-content mt-4 mt-sm-0">
-                                    <div class="d-flex align-items-center flex-nowrap star-rating">
-                                        <ul class="d-flex align-items-center me-2">
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-                                        <span class="flex-shrink-0">(5.2k Reviews)</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fw-bold text-heading title d-block fs-sm">Wilwood DPHA Front Caliper & Rotor Kit Drill Red Honda</a>
-                                    <div class="pricing mt-2">
-                                        <span class="fw-bold h4 deleted me-1">Rp. 200.000</span>
-                                        <span class="fw-bold h4 text-danger">Rp. 100.000</span>
-                                    </div>
-                                    <a href="{{ route('index') }}" class="fs-xs fw-bold mt-10 d-inline-block explore-btn">Shop Now<span class="ms-1"><i class="fa-solid fa-arrow-right"></i></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-6 col-sm-8 col-10">
-                        <div class="vertical-banner text-center bg-white rounded-2" data-background="storage/banner-4.png">
-                            <h5 class="mb-1">Disc on All item</h5>
-                            <div class="d-flex align-items-center justify-content-center gap-2">
-                                <span class="hot-badge bg-danger fw-bold fs-xs position-relative text-white">HOT</span>
-                                <span class="offer-title text-danger fw-bold">10% Off</span>
-                            </div>
-                            <a href="{{ route('index') }}" class="explore-btn text-primary fw-bold">Shop Now<span class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
-                        </div>
-                        <div class="counter-box bg-white rounded-2 mt-4">
-                            <div class="horizontal-counter d-flex align-items-center gap-3">
-                                <span class="icon-wrapper d-inline-flex align-items-center justify-content-center rounded-2 bg-glimpse-pink flex-shrink-0">
-                                  <img src="assets/img/icons/letter-box.svg" alt="icon" class="img-fluid">
-                              </span>
-                                <div class="numbers">
-                                    <h3 class="mb-1"><span class="counter">456</span>k+</h3>
-                                    <h6 class="mb-0 text-gray fs-sm">Total Products</h6>
-                                </div>
-                            </div>
-                            <span class="gradient-spacer-2 d-block my-4"></span>
-                            <div class="horizontal-counter d-flex align-items-center gap-3">
-                                <span class="icon-wrapper d-inline-flex align-items-center justify-content-center rounded-2 bg-azure-mist flex-shrink-0">
-                                  <img src="assets/img/icons/thumbs-up.svg" alt="icon" class="img-fluid">
-                              </span>
-                                <div class="numbers">
-                                    <h3 class="mb-1"><span class="counter">16</span>M+</h3>
-                                    <h6 class="mb-0 text-gray fs-sm">Customer Satisfaction</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> <!--products listing end-->
-
-        <!--blog section start-->
-        <section class="blog-section pb-120 position-relative overflow-hidden z-1">
-            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute dal-shape z--1">
-            <img src="storage/dashboard.svg" alt="dashboard" class="position-absolute frame-circle z--1 d-none d-md-block">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-5 col-md-8">
-                        <div class="section-title text-center">
-                            <h2 class="mb-3">Browse Recent Post</h2>
-                            <p class="mb-0">Interactivel product distinctive paradigms whereas one-to-one intellectual capital. resource sucking services.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row g-4 justify-content-center mt-3">
-                    <div class="col-xl-4 col-md-6">
-                        <article class="blog-card rounded-2 overflow-hidden bg-white">
-                            <div class="thumbnail overflow-hidden">
-                                <a href="{{ route('blog-details') }}"><img src="storage/blog-thumb-1.png" alt="blog thumb" class="img-fluid"></a>
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-meta d-flex align-items-center gap-3 mb-1">
-                                    <span class="fs-xs fw-medium"><i class="fa-solid fa-tags me-1"></i>Auto Parts</span>
-                                    <span class="fs-xs fw-medium"><i class="fa-regular fa-clock me-1"></i>May 27, 2024</span>
-                                </div>
-                                <a href="{{ route('blog-details') }}">
-                                    <h4 class="mb-3">Holiday Home Delivery We have Recently Ordered</h4>
-                                </a>
-                                <p class="mb-0 mb-5">Holisticly exploit equity invested growth strategies whereas enterpris</p>
-                                <a href="{{ route('blog-details') }}" class="btn btn-primary-light btn-md">Explore More<span class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-xl-4 col-md-6">
-                        <article class="blog-card rounded-2 overflow-hidden bg-white">
-                            <div class="thumbnail overflow-hidden">
-                                <a href="{{ route('blog-details') }}"><img src="storage/blog-thumb-2.png" alt="blog thumb" class="img-fluid"></a>
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-meta d-flex align-items-center gap-3 mb-1">
-                                    <span class="fs-xs fw-medium"><i class="fa-solid fa-tags me-1"></i>Auto Parts</span>
-                                    <span class="fs-xs fw-medium"><i class="fa-regular fa-clock me-1"></i>May 27, 2024</span>
-                                </div>
-                                <a href="{{ route('blog-details') }}">
-                                    <h4 class="mb-3">Holiday Home Delivery We have Recently Ordered</h4>
-                                </a>
-                                <p class="mb-0 mb-5">Holisticly exploit equity invested growth strategies whereas enterpris</p>
-                                <a href="{{ route('blog-details') }}" class="btn btn-primary-light btn-md">Explore More<span class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-xl-4 col-md-6">
-                        <article class="blog-card rounded-2 overflow-hidden bg-white">
-                            <div class="thumbnail overflow-hidden">
-                                <a href="{{ route('blog-details') }}"><img src="storage/blog-thumb-3.png" alt="blog thumb" class="img-fluid"></a>
-                            </div>
-                            <div class="blog-card-content">
-                                <div class="blog-meta d-flex align-items-center gap-3 mb-1">
-                                    <span class="fs-xs fw-medium"><i class="fa-solid fa-tags me-1"></i>Auto Parts</span>
-                                    <span class="fs-xs fw-medium"><i class="fa-regular fa-clock me-1"></i>May 27, 2024</span>
-                                </div>
-                                <a href="{{ route('blog-details') }}">
-                                    <h4 class="mb-3">Holiday Home Delivery We have Recently Ordered</h4>
-                                </a>
-                                <p class="mb-0 mb-5">Holisticly exploit equity invested growth strategies whereas enterpris</p>
-                                <a href="{{ route('blog-details') }}" class="btn btn-primary-light btn-md">Explore More<span class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section> <!--blog section end-->
 
         @include('footerheader.footer')
-
-        <!--modal box-->
-
-        <div class="modal fade" id="quickview_modal">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <div class="gstore-product-quick-view bg-white rounded-3 py-6 px-4">
-                            <div class="row align-items-center g-4">
-                                <div class="col-xl-6 align-self-end">
-                                    <div class="quickview-double-slider">
-                                        <div class="quickview-product-slider swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide text-center">
-                                                    <img src="storage/aemk2.png" alt="aemk" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide text-center">
-                                                    <img src="storage/aemk2.png" alt="aemk" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide text-center">
-                                                    <img src="storage/aemk2.png" alt="aemk" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide text-center">
-                                                    <img src="storage/aemk2.png" alt="aemk" class="img-fluid">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-thumbnail-slider swiper mt-80">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                                    <img src="storage/aemkdetail.png" alt="jam" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                                    <img src="storage/aemkdetail.png" alt="jam" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                                    <img src="storage/aemkdetail.png" alt="jam" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                                    <img src="storage/aemkdetail.png" alt="jam" class="img-fluid">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="product-info">
-                                        <h4 class="mt-1 mb-3">AEM K-Type Thermocouple Kit <br> Single - 30-2068</h4>
-                                        <div class="d-flex align-items-center flex-nowrap star-rating fs-xxs mb-2">
-                                            <ul class="d-flex align-items-center me-2">
-                                                <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                                <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                                <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                                <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                                <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            </ul>
-                                            <span class="flex-shrink-0">(3.2k Reviews)</span>
-                                        </div>
-                                        <div class="pricing mt-2">
-                                            <span class="fw-bold fs-xs text-danger">Rp. 140.000</span>
-                                            <span class="fw-bold fs-xs deleted ms-1">Rp. 240.000</span>
-                                        </div>
-                                        <div class="widget-title d-flex mt-4">
-                                            <h6 class="mb-1 flex-shrink-0">Description</h6>
-                                            <span class="hr-line w-100 position-relative d-block align-self-end ms-1"></span>
-                                        </div>
-                                        <p class="mb-3">Pyrometer whether its for a full rebuild or some standard maintenance, the proper engine components are needed to make sure your vehicle is running smooth. </p>
-                                        <ul class="d-flex flex-column gap-2">
-                                            <li><span class="me-2 text-primary"><i class="fa-solid fa-circle-check"></i></span>K-Type Closed Tip Thermocouple</li>
-                                            <li><span class="me-2 text-primary"><i class="fa-solid fa-circle-check"></i></span>Inconel sheath</li>
-                                            <li><span class="me-2 text-primary"><i class="fa-solid fa-circle-check"></i></span>1/8" NPT compression fitting</li>
-                                            <li><span class="me-2 text-primary"><i class="fa-solid fa-circle-check"></i></span>K-Type Temp Sens/Ext</li>
-                                        </ul>
-                                        <h6 class="fs-md mb-2 mt-3">Color:</h6>
-                                        <ul class="product-radio-btn mb-4 d-flex align-items-center gap-2">
-                                            <li>
-                                                <input type="radio" name="weight" value="250g" checked>
-                                                <label>Yellow</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="weight" value="250g">
-                                                <label>Blue</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="weight" value="250g">
-                                                <label>Red</label>
-                                            </li>
-                                        </ul>
-                                        <div class="d-flex align-items-center gap-4 flex-wrap">
-                                            <div class="product-qty d-flex align-items-center">
-                                                <button class="decrese">-</button>
-                                                <input type="text" value="01">
-                                                <button class="increase">+</button>
-                                            </div>
-                                            <a href="#" class="btn btn-secondary btn-md"><span class="me-2"><i class="fa-solid fa-cart-plus"></i></span>Add to Cart</a>
-                                        </div>
-                                        <div class="categories mt-4">
-                                            <a href="#" class="btn btn-outline btn-sm">Engine</a>
-                                            <a href="#" class="btn btn-outline btn-sm">AEM</a>
-                                            <a href="#" class="btn btn-outline btn-sm">Cheap</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!--modal box end-->
-
-
-
     </div>
 
 
@@ -1553,6 +1135,7 @@
     <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
     <script src="assets/js/vendors/jquery-ui.min.js"></script>
     <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/vendors/swiper-bundle.min.js"></script>
     <script src="assets/js/vendors/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/vendors/simplebar.min.js"></script>
@@ -1564,6 +1147,57 @@
     <script src="assets/js/vendors/counterup.min.js"></script>
     <script src="assets/js/vendors/typer.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+       
+        setTimeout(function() {
+            var flashMessage = document.getElementById('flash-message');
+            if (flashMessage) {
+                flashMessage.classList.add('fade-out');
+               
+                setTimeout(function() {
+                    flashMessage.remove();
+                }, 1000); 
+            }
+        }, 2000);
+    </script>
+    <script>
+    $(document).ready(function() {
+        function updateCountdown() {
+            // Set the date we're counting down to
+            var countDownDate = new Date("June 30, 2023 23:59:59").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+                // Get today's date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the corresponding elements
+                $(".countdown-timer .days").text(days);
+                $(".countdown-timer .hours").text(hours);
+                $(".countdown-timer .minutes").text(minutes);
+                $(".countdown-timer .seconds").text(seconds);
+
+                // If the count down is over, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    $(".countdown-timer").html("<h5 class='mb-0'>EXPIRED</h5>");
+                }
+            }, 1000);
+        }
+
+        updateCountdown();
+    });
+</script>
+
     <!--endbuild-->
 </body>
 

@@ -5,7 +5,15 @@
                     <div class="row align-items-center">
                         <div class="col-xxl-4 col-xl-3">
                             <div class="topbar-info d-none d-xl-block">
-                                <p class="text-white fs-sm fw-medium mb-0">Welcome to Autoparthub</p>
+                                <p class="text-white fs-sm fw-medium mb-0">
+                                    @if(session('name'))
+                                        Welcome to Autoparthub, {{ session('name') }}
+                                    @elseif(Cookie::get('name'))
+                                        Welcome to Autoparthub, {{ Cookie::get('name') }}
+                                    @else
+                                        Welcome to Autoparthub
+                                    @endif
+                                </p>
                             </div>
                         </div>
                         <div class="col-xxl-8 col-xl-9">
@@ -39,22 +47,22 @@
                                       </svg>
                                   </span>
                                     Surabaya, East Java, Indonesia - 60219
-                                </li>
+                                </li> 
                                 <li class="nav-item dropdown tt-language-dropdown">
                                     <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                        <img src="assets/img/flags/usd.svg" alt="country" class="img-fluid me-1">
+                                        <img src="{{asset('assets/img/flags/usd.svg')}}" alt="country" class="img-fluid me-1">
                                         English
                                     </a>
                                     <ul class="dropdown-menu dropdown-menu-end" data-popper-placement="bottom-end">
                                         <li>
                                             <a class="dropdown-item" href="#">
-                                                <img src="assets/img/flags/usd.svg" alt="country" class="img-fluid me-1">
+                                                <img src="{{asset('assets/img/flags/usd.svg')}}" alt="country" class="img-fluid me-1">
                                                 English
                                             </a>
                                         </li>
                                         <li>
                                             <a class="dropdown-item" href="#">
-                                                <img src="assets/img/flags/idr.png" alt="country" class="img-fluid me-1">
+                                                <img src="{{asset('assets/img/flags/idr.png')}}" alt="country" class="img-fluid me-1">
                                                 Indonesia
                                             </a>
                                         </li>
@@ -90,140 +98,11 @@
                 <div class="gshop-navbar bg-white rounded ps-lg-5 position-relative">
                     <div class="row align-items-center">
                         <div class="col-xxl-2 col-xl-3 col-md-3 col-5">
-                            <a href="{{ route('index') }}" class="logo"><img src="storage/logos.png" alt="logo" class="img-fluid"></a>
+                            <a href="{{ route('index') }}" class="logo"><img src="{{asset('storage/logos.png')}}" alt="logo" class="img-fluid"></a>
                         </div>
                         <div class="col-xxl-10 col-xl-9 col-md-9 col-7">
                             <div class="gshop-navbar-right d-flex align-items-center justify-content-end position-relative">
-                                <div class="category-dropdown position-relative d-none d-md-inline-block">
-                                    <a href="javascript:void(0)" class="category-dropdown-btn fw-bold d-none d-sm-inline-block">Browse Category<span
-                                          class="ms-1"><i class="fa-solid fa-angle-down"></i></span></a>
-                                    <a href="javascript:void(0)" class="category-dropdown-btn fw-bold d-sm-none">Categories
-                                        <span class="ms-1"><i class="fa-solid fa-angle-down"></i></span></a>
-                                    <div class="category-dropdown-box scrollbar">
-                                        <ul class="category-dropdown-menu">
-                                            <li>
-                                            <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/baby-care.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Tires</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/cleaning.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Body Kit</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/bakery-biscuits.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Air Filter</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/coffee-drinks.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Air Fresheners</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/beauty-health.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Engine Oil</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/breakfast.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Car Battery</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/cold-drinks.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Mufflers</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/fresh-fruits.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Shockbreaker</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/honey.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Honey</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/fresh-organic.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Disc Brakes</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/jam-jelly.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Jam & Jelly</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/sports-fitness.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Sports & Fitness</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/sea-fish.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Sea Fish</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/pet-care.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Pet Care</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('shop-grid') }}" class="d-flex align-items-center">
-                                                    <div class="me-2 avatar-icon">
-                                                        <img src="assets/img/category/meat.png" alt="vegetables" class="w-100 h-100 rounded-circle">
-                                                    </div>
-                                                    <span>Meat</span>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                
                                 <nav class="gshop-navmenu ms-3 d-none d-xl-block">
                                     <ul class="d-flex align-itmes-center justify-content-end">
                                         <li class="has-submenu">
@@ -241,7 +120,7 @@
                                                 <li><a href="{{ route('shop-grid') }}">Shop Grid</a></li>
                                             </ul>
                                         </li>
-                                        <li class="has-submenu">
+                                        <!-- <li class="has-submenu">
                                             <a href="javascript:void(0)">Blog<span class="ms-1 fs-xs float-end"><i
                                                       class="fa-solid fa-angle-down"></i></span></a>
                                             <ul>
@@ -249,7 +128,7 @@
                                                 <li><a href="{{ route('blog-listing') }}">Blog List</a></li>
                                                 <li><a href="{{ route('blog-details') }}">Blog Details</a></li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                         <li class="has-submenu">
                                             <a href="javascript:void(0)">Pages<span class="ms-1 fs-xs float-end"><i
                                                       class="fa-solid fa-angle-down"></i></span></a>
@@ -258,13 +137,13 @@
                                                                                         <li><a href="{{ route('my-account') }}">My Account</a></li>
                                                 <li><a href="{{ route('cart') }}">Cart</a></li>
                                                 <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
-                                                <li><a href="{{ route('checkout') }}">Checkout</a></li>
-                                                <li><a href="{{ route('invoice') }}">Invoice</a></li>
-                                                <li><a href="{{ route('contact') }}">Contact</a></li>
+                                                <li><a href="/transactions">Checkout</a></li>
+                                                <!-- <li><a href="{{ route('invoice') }}">Invoice</a></li> -->
+                                                <!-- <li><a href="{{ route('contact') }}">Contact</a></li> -->
                                                 <li><a href="{{ route('team') }}">Team</a></li>
                                                 <li><a href="{{ route('login') }}">Login</a></li>
                                                 <li><a href="{{ route('signup') }}">Sign Up</a></li>
-                                                <li><a href="{{ route('coupons') }}">All Coupons</a></li>
+                                                <!--<li><a href="{{ route('coupons') }}">All Coupons</a></li>-->
                                             </ul>
                                         </li>
                                     </ul>
@@ -300,7 +179,10 @@
                                                               class="fa-solid fa-tags"></i></span>My Cart</a></li>
                                                 <li><a href="{{ route('wishlist') }}"><span class="me-2"><i
                                                               class="fa-solid fa-heart"></i></span>My Wishlist</a></li>
-                                                <li><a href="#"><span class="me-2"><i
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                @csrf
+                                                </form>
+                                                <li><a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="me-2"><i
                                                               class="fa-solid fa-arrow-right-from-bracket"></i></span>Sign
                                                         Out</a></li>
                                             </ul>
@@ -314,124 +196,14 @@
                                         </button>
                                         <div class="cart-box-wrapper">
                                             <div class="apt_cart_box theme-scrollbar">
-                                                <!--
-                                                <ul class="at_scrollbar scrollbar">
-                                                    <li class="d-flex align-items-center">
-                                                        <div class="thumb-wrapper">
-                                                            <a href="#"><img src="assets/img/products/thumb-sm-1.png" alt="products" class="img-fluid"></a>
-                                                        </div>
-                                                        <div class="items-content ms-3">
-                                                            <a href="{{ route('index') }}">
-                                                                <h6 class="mb-1">European Lemon Zest...</h6>
-                                                            </a>
-                                                            <div class="products_meta d-flex align-items-center">
-                                                                <div>
-                                                                    <span class="price text-primary fw-semibold">$17.00</span>
-                                                                    <span class="count">x 1</span>
-                                                                </div>
-                                                                <button class="remove_cart_btn"><i
-                                                                      class="fa-solid fa-trash-can"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="d-flex align-items-center">
-                                                        <div class="thumb-wrapper">
-                                                            <a href="#"><img src="assets/img/products/thumb-sm-2.png" alt="products" class="img-fluid"></a>
-                                                        </div>
-                                                        <div class="items-content ms-3">
-                                                            <a href="{{ route('index') }}">
-                                                                <h6 class="mb-1">Popped Rice Crisps...</h6>
-                                                            </a>
-                                                            <div class="products_meta d-flex align-items-center">
-                                                                <div>
-                                                                    <span class="price text-primary fw-semibold">$17.00</span>
-                                                                    <span class="count">x 1</span>
-                                                                </div>
-                                                                <button class="remove_cart_btn"><i
-                                                                      class="fa-solid fa-trash-can"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="d-flex align-items-center">
-                                                        <div class="thumb-wrapper">
-                                                            <a href="#"><img src="assets/img/products/thumb-sm-3.png" alt="products" class="img-fluid"></a>
-                                                        </div>
-                                                        <div class="items-content ms-3">
-                                                            <a href="{{ route('index') }}">
-                                                                <h6 class="mb-1">Dried Onion Men...</h6>
-                                                            </a>
-                                                            <div class="products_meta d-flex align-items-center">
-                                                                <div>
-                                                                    <span class="price text-primary fw-semibold">$17.00</span>
-                                                                    <span class="count">x 1</span>
-                                                                </div>
-                                                                <button class="remove_cart_btn"><i
-                                                                      class="fa-solid fa-trash-can"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="d-flex align-items-center">
-                                                        <div class="thumb-wrapper">
-                                                            <a href="#"><img src="assets/img/products/thumb-sm-4.png" alt="products" class="img-fluid"></a>
-                                                        </div>
-                                                        <div class="items-content ms-3">
-                                                            <a href="{{ route('index') }}">
-                                                                <h6 class="mb-1">European Lemon Zest...</h6>
-                                                            </a>
-                                                            <div class="products_meta d-flex align-items-center">
-                                                                <div>
-                                                                    <span class="price text-primary fw-semibold">$17.00</span>
-                                                                    <span class="count">x 1</span>
-                                                                </div>
-                                                                <button class="remove_cart_btn"><i
-                                                                      class="fa-solid fa-trash-can"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="d-flex align-items-center">
-                                                        <div class="thumb-wrapper">
-                                                            <a href="#"><img src="assets/img/products/thumb-sm-1.png" alt="products" class="img-fluid"></a>
-                                                        </div>
-                                                        <div class="items-content ms-3">
-                                                            <a href="{{ route('index') }}">
-                                                                <h6 class="mb-1">Popped Rice Crisps...</h6>
-                                                            </a>
-                                                            <div class="products_meta d-flex align-items-center">
-                                                                <div>
-                                                                    <span class="price text-primary fw-semibold">$17.00</span>
-                                                                    <span class="count">x 1</span>
-                                                                </div>
-                                                                <button class="remove_cart_btn"><i
-                                                                      class="fa-solid fa-trash-can"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li class="d-flex align-items-center">
-                                                        <div class="thumb-wrapper">
-                                                            <a href="#"><img src="assets/img/products/thumb-sm-2.png" alt="products" class="img-fluid"></a>
-                                                        </div>
-                                                        <div class="items-content ms-3">
-                                                            <a href="{{ route('index') }}">
-                                                                <h6 class="mb-1">Dried Onion Kinh Men...</h6>
-                                                            </a>
-                                                            <div class="products_meta d-flex align-items-center">
-                                                                <div>
-                                                                    <span class="price text-primary fw-semibold">$17.00</span>
-                                                                    <span class="count">x 1</span>
-                                                                </div>
-                                                                <button class="remove_cart_btn"><i
-                                                                      class="fa-solid fa-trash-can"></i></button>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                -->
+                                               
                                                 <div class="d-flex align-items-center justify-content-between mt-3">
-                                                    <h6 class="mb-0">Subtotal:</h6>
-                                                    <span class="fw-semibold text-primary">$1,247.00</span>
+                                                   
                                                 </div>
-                                                <a href="{{ route('checkout') }}" class="btn btn-primary btn-md d-block mt-4"><span
+                                                <a href="{{ route('cart') }}" class="btn btn-primary btn-md d-block mt-4"><span
                                                       class="me-2"><i class="fa-solid fa-wallet"></i></span>Checkout</a>
+                                                      <a href="/transactions" class="btn btn-primary btn-md d-block mt-4"><span
+                                                      class="me-2"><i class="fa-solid fa-wallet"></i></span>Transactions</a>
                                             </div>
                                         </div>
                                     </div>
@@ -472,4 +244,8 @@
                     </div>
                 </div>
             </div>
+                <!--build:css-->
+    <link rel="stylesheet" href="{{asset ('css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css')}}">
+    <!-- endbuild -->
         </header> <!--header section end-->

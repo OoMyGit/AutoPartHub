@@ -11,6 +11,7 @@ class ShopGridController extends Controller
     {
         $products = DB::table('product')->paginate(12); // Fetch 12 products per page
         return view('shop-grid', compact('products'));
+        
     }
 
 }

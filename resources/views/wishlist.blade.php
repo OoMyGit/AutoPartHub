@@ -84,16 +84,6 @@
                             <a href="javascript:void(0)">Products<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
                             <ul>
                                 <li><a href="{{ route('shop-grid') }}">Shop Grid</a></li>
-                                <li><a href="{{ route('shop-grid-2') }}">Shop Grid V2</a></li>
-                                <li><a href="{{ route('product-details') }}">Product Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
-                            <a href="javascript:void(0)">Blog<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
-                            <ul>
-                                <li><a href="{{ route('blog-grid') }}">Blog Grid</a></li>
-                                <li><a href="{{ route('blog-listing') }}">Blog List</a></li>
-                                <li><a href="{{ route('blog-details') }}">Blog Details</a></li>
                             </ul>
                         </li>
                         <li class="has-submenu">
@@ -104,7 +94,6 @@
                                 <li><a href="{{ route('cart') }}">Cart</a></li>
                                 <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
                                 <li><a href="{{ route('checkout') }}">Checkout</a></li>
-                                <li><a href="{{ route('invoice') }}">Invoice</a></li>
                                 <li><a href="{{ route('contact') }}">Contact</a></li>
                                 <li><a href="{{ route('team') }}">Team</a></li>
                                 <li><a href="{{ route('login') }}">Login</a></li>
@@ -135,18 +124,18 @@
         <!--breadcrumb section start-->
         <div class="gstore-breadcrumb position-relative z-1 overflow-hidden mt--50">
             <img src="storage/bg-shape-6.png" alt="bg-shape" class="position-absolute start-0 z--1 w-100 bg-shape">
-            <img src="assets/img/shapes/pata-xs.svg" alt="pata" class="position-absolute pata-xs z--1 vector-shape">
-            <img src="assets/img/shapes/onion.png" alt="onion" class="position-absolute z--1 onion start-0 top-0 vector-shape">
-            <img src="assets/img/shapes/frame-circle.svg" alt="frame circle" class="position-absolute z--1 frame-circle vector-shape">
-            <img src="assets/img/shapes/leaf.svg" alt="leaf" class="position-absolute z--1 leaf vector-shape">
-            <img src="assets/img/shapes/garlic-white.png" alt="garlic" class="position-absolute z--1 garlic vector-shape">
-            <img src="assets/img/shapes/roll-1.png" alt="roll" class="position-absolute z--1 roll vector-shape">
-            <img src="assets/img/shapes/roll-2.png" alt="roll" class="position-absolute z--1 roll-2 vector-shape">
-            <img src="assets/img/shapes/pata-xs.svg" alt="roll" class="position-absolute z--1 pata-xs-2 vector-shape">
-            <img src="assets/img/shapes/tomato-half.svg" alt="tomato" class="position-absolute z--1 tomato-half vector-shape">
-            <img src="assets/img/shapes/tomato-slice.svg" alt="tomato" class="position-absolute z--1 tomato-slice vector-shape">
-            <img src="assets/img/shapes/cauliflower.png" alt="tomato" class="position-absolute z--1 cauliflower vector-shape">
-            <img src="assets/img/shapes/leaf-gray.png" alt="tomato" class="position-absolute z--1 leaf-gray vector-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute pata-xs z--1 vector-shape">
+            <img src="storage/spark.svg" alt="spark" class="position-absolute z--1 onion start-0 top-0 vector-shape">
+            <img src="storage/wrench.svg" alt="wrench" class="position-absolute z--1 frame-circle vector-shape">
+            <img src="storage/suspension2.png" alt="suspension" class="position-absolute z--1 leaf vector-shape">
+            <img src="storage/dashboard.svg" alt="dashboard" class="position-absolute z--1 garlic vector-shape">
+            <img src="storage/exhaustpipe.png" alt="exhaustpipe" class="position-absolute z--1 roll vector-shape">
+            <img src="storage/muffler.svg" alt="muffler" class="position-absolute z--1 roll-2 vector-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute z--1 pata-xs-2 vector-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute z--1 tomato-half vector-shape">
+            <img src="storage/tire.png" alt="tire" class="position-absolute z--1 tomato-slice vector-shape">
+            <img src="storage/wrench.svg" alt="wrench" class="position-absolute z--1 cauliflower vector-shape">
+            <img src="storage/dashboard.svg" alt="dashboard" class="position-absolute z--1 leaf-gray vector-shape">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -167,165 +156,57 @@
         <!--breadcrumb section end-->
 
 
-        <!--wishlist section start-->
-        <section class="wishlist-section ptb-120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="wishlist-table bg-white">
-                            <table class="w-100">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">Image</th>
-                                        <th class="text-center">Product Name</th>
-                                        <th class="text-center">Stock Status</th>
-                                        <th class="text-center">Unit Price</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center thumbnail">
-                                            <img src="assets/img/products/thumb-sm-1.png" alt="product-thumb" class="img-fluid">
-                                        </td>
-                                        <td>
-                                            <span class="fw-bold text-secondary fs-xs">Vegetable</span>
-                                            <h6 class="mb-1 mt-1">Three Carrot Vegetables Peruvian Cuisine</h6>
-                                            <div class="star-rating">
-                                                <ul class="rating-fields fs-xs text-warning d-inline-flex align-items-center">
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="far fa-star"></i></li>
-                                                </ul>
-                                                <span class="fs-xs">( 3 reviews )</span>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="stock-btn text-dark fw-bold fs-xxs d-inline-block rounded-pill">In Stock</span>
-                                        </td>
-                                        <td class="text-end">
-                                            <span class="price fw-bold text-dark">$918.00</span>
-                                            <a href="#" class="btn btn-secondary btn-sm ms-5 rounded-1">Add to Cart</a>
-                                            <a href="#" class="close-btn ms-3"><i class="fas fa-close"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center thumbnail">
-                                            <img src="assets/img/products/thumb-sm-1.png" alt="product-thumb" class="img-fluid">
-                                        </td>
-                                        <td>
-                                            <span class="fw-bold text-secondary fs-xs">Vegetable</span>
-                                            <h6 class="mb-1 mt-1">Three Carrot Vegetables Peruvian Cuisine</h6>
-                                            <div class="star-rating">
-                                                <ul class="rating-fields fs-xs text-warning d-inline-flex align-items-center">
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="far fa-star"></i></li>
-                                                </ul>
-                                                <span class="fs-xs">( 3 reviews )</span>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="stock-btn text-dark fw-bold fs-xxs d-inline-block rounded-pill">In Stock</span>
-                                        </td>
-                                        <td class="text-end">
-                                            <span class="price fw-bold text-dark">$918.00</span>
-                                            <a href="#" class="btn btn-secondary btn-sm ms-5 rounded-1">Add to Cart</a>
-                                            <a href="#" class="close-btn ms-3"><i class="fas fa-close"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center thumbnail">
-                                            <img src="assets/img/products/thumb-sm-1.png" alt="product-thumb" class="img-fluid">
-                                        </td>
-                                        <td>
-                                            <span class="fw-bold text-secondary fs-xs">Vegetable</span>
-                                            <h6 class="mb-1 mt-1">Three Carrot Vegetables Peruvian Cuisine</h6>
-                                            <div class="star-rating">
-                                                <ul class="rating-fields fs-xs text-warning d-inline-flex align-items-center">
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="far fa-star"></i></li>
-                                                </ul>
-                                                <span class="fs-xs">( 3 reviews )</span>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="stock-btn text-dark fw-bold fs-xxs d-inline-block rounded-pill">In Stock</span>
-                                        </td>
-                                        <td class="text-end">
-                                            <span class="price fw-bold text-dark">$918.00</span>
-                                            <a href="#" class="btn btn-secondary btn-sm ms-5 rounded-1">Add to Cart</a>
-                                            <a href="#" class="close-btn ms-3"><i class="fas fa-close"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center thumbnail">
-                                            <img src="assets/img/products/thumb-sm-1.png" alt="product-thumb" class="img-fluid">
-                                        </td>
-                                        <td>
-                                            <span class="fw-bold text-secondary fs-xs">Vegetable</span>
-                                            <h6 class="mb-1 mt-1">Three Carrot Vegetables Peruvian Cuisine</h6>
-                                            <div class="star-rating">
-                                                <ul class="rating-fields fs-xs text-warning d-inline-flex align-items-center">
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="far fa-star"></i></li>
-                                                </ul>
-                                                <span class="fs-xs">( 3 reviews )</span>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="stock-btn text-dark fw-bold fs-xxs d-inline-block rounded-pill">In Stock</span>
-                                        </td>
-                                        <td class="text-end">
-                                            <span class="price fw-bold text-dark">$918.00</span>
-                                            <a href="#" class="btn btn-secondary btn-sm ms-5 rounded-1">Add to Cart</a>
-                                            <a href="#" class="close-btn ms-3"><i class="fas fa-close"></i></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center thumbnail">
-                                            <img src="assets/img/products/thumb-sm-1.png" alt="product-thumb" class="img-fluid">
-                                        </td>
-                                        <td>
-                                            <span class="fw-bold text-secondary fs-xs">Vegetable</span>
-                                            <h6 class="mb-1 mt-1">Three Carrot Vegetables Peruvian Cuisine</h6>
-                                            <div class="star-rating">
-                                                <ul class="rating-fields fs-xs text-warning d-inline-flex align-items-center">
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="far fa-star"></i></li>
-                                                </ul>
-                                                <span class="fs-xs">( 3 reviews )</span>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">
-                                            <span class="stock-btn text-dark fw-bold fs-xxs d-inline-block rounded-pill">In Stock</span>
-                                        </td>
-                                        <td class="text-end">
-                                            <span class="price fw-bold text-dark">$918.00</span>
-                                            <a href="#" class="btn btn-secondary btn-sm ms-5 rounded-1">Add to Cart</a>
-                                            <a href="#" class="close-btn ms-3"><i class="fas fa-close"></i></a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--wishlist section end-->
+      <!-- Wishlist section start -->
+<section class="wishlist-section ptb-120">
+    <div class="container">
+        <div class="wishlist-table bg-white">
+            <table class="w-100">
+                <thead>
+                    <tr>
+                        <th class="text-center">Image</th>
+                        <th class="text-center">Product Name</th>
+                        <th class="text-center">Stock Status</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Actions</th> <!-- Added Actions column -->
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($wishlist_items as $item)
+                    <tr>
+                        <td class="text-center thumbnail">
+                            <img src="{{ $item->image }}" alt="product-image" class="img-fluid">
+                        </td>
+                        <td>
+                            <span class="fw-bold text-secondary fs-xs">{{ $item->nama_product }}</span>
+                        </td>
+                        <td class="text-center">
+                            <span class="stock-btn text-dark fw-bold fs-xxs d-inline-block rounded-pill">{{ $item->stock > 0 ? 'In Stock' : 'Out of Stock' }}</span>
+                        </td>
+                        <td class="text-end">
+                            <span class="price fw-bold text-dark">Rp{{ number_format($item->price_unit, 0, ',', '.') }}</span>
+                        </td>
+                        <td class="text-center">
+                            <!-- Remove Button -->
+                            <form action="{{ route('wishlist.remove') }}" method="POST" class="d-inline">
+                                @csrf
+                                <input type="hidden" name="id_product" value="{{ $item->id_product }}">
+                                <button type="submit" class="btn btn-danger btn-sm">
+                                    Remove
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- Wishlist section end -->
+
+
+
+
 
         @include('footerheader.footer')
 
@@ -337,6 +218,53 @@
     </button>
     <!--scroll bottom to top button end-->
     <!--build:js-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Add click event listeners to all heart icons
+        document.querySelectorAll('.fa-heart').forEach(heartIcon => {
+            heartIcon.addEventListener('click', function() {
+                const productId = this.dataset.productId;
+                const isInWishlist = this.classList.contains('text-danger');
+
+                // Determine the URL based on whether the product is already in the wishlist
+                const url = isInWishlist ? "{{ route('wishlist.remove') }}" : "{{ route('wishlist.add') }}";
+
+                // Send AJAX request to add or remove from wishlist
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    body: JSON.stringify({
+                        productId: productId
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Toggle the heart icon color
+                        heartIcon.classList.toggle('text-danger');
+                        console.log('Wishlist updated');
+                    } else {
+                        console.error('Error updating wishlist');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            });
+        });
+    });
+</script>
+
+
+
+
     <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
     <script src="assets/js/vendors/jquery-ui.min.js"></script>
     <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>

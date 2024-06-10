@@ -14,18 +14,14 @@ class SignupController extends Controller
         return view('signup');
     }
 
-    public function showLoginForm()
-    {
-        return view('login');
-    }
-
     public function register(Request $request)
     {
         // Validate the request
         $request->validate([
             'first_name' => 'required|string',
             'last_name' => 'required|string',
-            'email' => 'required|string|email|unique:UserCredentials,email',
+            'username' => 'required|string',
+            'email' => 'required|string|email',
             'password' => 'required|string|min:6',
             'address' => 'required|string',
             'province' => 'required|string',
@@ -40,19 +36,8 @@ class SignupController extends Controller
         DB::beginTransaction();
 
         try {
-            // Create a new user record
-            $userId = uniqid('USR');
-            DB::table('User_Credentials')->insert([
-                'id_user' => $userId,
-                'username' => $request->first_name . '.' . $request->last_name,
-                'email' => $request->email,
-                'password' => $request->password, // Plain text password
-            ]);
-
-            // Create a new customer record
-            $customerId = uniqid('CST');
+                        // Create a new customer record
             DB::table('User')->insert([
-                'id_customer' => $customerId,
                 'name' => $request->first_name . ' ' . $request->last_name,
                 'birthdate' => $request->birthdate,
                 'gender' => $request->gender,
@@ -61,18 +46,21 @@ class SignupController extends Controller
                 'province' => $request->province,
                 'city' => $request->city,
                 'postal_code' => $request->postal_code,
-                'id_user' => $userId,
+                'username' => $request->username,
+                'email' => $request->email,
+                'password' => $request->password,
+
             ]);
 
             // Commit the transaction
             DB::commit();
 
-            return redirect()->route('login')->with('success', 'Registration successful.');
+            return redirect()->route('login')->with('message', 'Registration successful.');
         } catch (\Exception $e) {
             // Rollback the transaction in case of error
             DB::rollBack();
 
-            return redirect()->route('register')->with('error', 'Registration not successful.');
+            return redirect()->route('signup')->with('message', 'Registration not successful.');
         }
     }
 

@@ -24,7 +24,11 @@
 </head>
 
 <body>
-
+@if (session('message'))
+        <div class="alert alert-danger text-center">
+            {{ session('message') }}
+        </div>
+    @endif
     <!--preloader start-->
     <div id="preloader">
         <img src="assets/img/preloader2.gif" alt="preloader" width="450" class="img-fluid">
@@ -88,14 +92,6 @@
                             </ul>
                         </li>
                         <li class="has-submenu">
-                            <a href="javascript:void(0)">Blog<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
-                            <ul>
-                                <li><a href="{{ route('blog-grid') }}">Blog Grid</a></li>
-                                <li><a href="{{ route('blog-listing') }}">Blog List</a></li>
-                                <li><a href="{{ route('blog-details') }}">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
                             <a href="javascript:void(0)">Pages<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
                             <ul>
                                 <li><a href="{{ route('about') }}">About Us</a></li>
@@ -103,7 +99,6 @@
                                 <li><a href="{{ route('cart') }}">Cart</a></li>
                                 <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
                                 <li><a href="{{ route('checkout') }}">Checkout</a></li>
-                                <li><a href="{{ route('invoice') }}">Invoice</a></li>
                                 <li><a href="{{ route('contact') }}">Contact</a></li>
                                 <li><a href="{{ route('team') }}">Team</a></li>
                                 <li><a href="{{ route('login') }}">Login</a></li>
@@ -133,19 +128,19 @@
 
         <!--breadcrumb section start-->
         <div class="gstore-breadcrumb position-relative z-1 overflow-hidden mt--50">
-            <img src="storage/bg-shape-6.png" alt="bg-shape" class="position-absolute start-0 z--1 w-100 bg-shape">
-            <img src="assets/img/shapes/pata-xs.svg" alt="pata" class="position-absolute pata-xs z--1 vector-shape">
-            <img src="assets/img/shapes/onion.png" alt="onion" class="position-absolute z--1 onion start-0 top-0 vector-shape">
-            <img src="assets/img/shapes/frame-circle.svg" alt="frame circle" class="position-absolute z--1 frame-circle vector-shape">
-            <img src="assets/img/shapes/leaf.svg" alt="leaf" class="position-absolute z--1 leaf vector-shape">
-            <img src="assets/img/shapes/garlic-white.png" alt="garlic" class="position-absolute z--1 garlic vector-shape">
-            <img src="assets/img/shapes/roll-1.png" alt="roll" class="position-absolute z--1 roll vector-shape">
-            <img src="assets/img/shapes/roll-2.png" alt="roll" class="position-absolute z--1 roll-2 vector-shape">
-            <img src="assets/img/shapes/pata-xs.svg" alt="roll" class="position-absolute z--1 pata-xs-2 vector-shape">
-            <img src="assets/img/shapes/tomato-half.svg" alt="tomato" class="position-absolute z--1 tomato-half vector-shape">
-            <img src="assets/img/shapes/tomato-slice.svg" alt="tomato" class="position-absolute z--1 tomato-slice vector-shape">
-            <img src="assets/img/shapes/cauliflower.png" alt="tomato" class="position-absolute z--1 cauliflower vector-shape">
-            <img src="assets/img/shapes/leaf-gray.png" alt="tomato" class="position-absolute z--1 leaf-gray vector-shape">
+        <img src="storage/bg-shape-6.png" alt="bg-shape" class="position-absolute start-0 z--1 w-100 bg-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute pata-xs z--1 vector-shape">
+            <img src="storage/spark.svg" alt="spark" class="position-absolute z--1 onion start-0 top-0 vector-shape">
+            <img src="storage/wrench.svg" alt="wrench" class="position-absolute z--1 frame-circle vector-shape">
+            <img src="storage/suspension2.png" alt="suspension" class="position-absolute z--1 leaf vector-shape">
+            <img src="storage/dashboard.svg" alt="dashboard" class="position-absolute z--1 garlic vector-shape">
+            <img src="storage/exhaustpipe.png" alt="exhaustpipe" class="position-absolute z--1 roll vector-shape">
+            <img src="storage/muffler.svg" alt="muffler" class="position-absolute z--1 roll-2 vector-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute z--1 pata-xs-2 vector-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute z--1 tomato-half vector-shape">
+            <img src="storage/tire.png" alt="tire" class="position-absolute z--1 tomato-slice vector-shape">
+            <img src="storage/wrench.svg" alt="wrench" class="position-absolute z--1 cauliflower vector-shape">
+            <img src="storage/dashboard.svg" alt="dashboard" class="position-absolute z--1 leaf-gray vector-shape">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -174,7 +169,7 @@
                             <input type="checkbox" id="select-all">
                             <span class="checkbox-field"><i class="fa-solid fa-check"></i></span>
                         </div>
-                        <label for="select-all">Select All(03 ITEMS)</label>
+                        <label for="select-all">Select All({{ count($cart_items) }} ITEMS)</label>
                     </div>
                     <a href="#" class="text-gray"><span class="me-2"><i class="fa-solid fa-trash-can"></i></span>Delete</a>
                 </div>
@@ -188,80 +183,45 @@
                             <th>Price</th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <img src="https://throtl.com/cdn/shop/products/067f65f4fe9ca127b092b61d3ae9c4e1_c8e53c42-385b-44e7-a880-42fc4bcbe5b5_750x.jpg?v=1670429769" alt="product-thumb" class="img-fluid">
-                                </td>
-                                <td class="text-start product-title">
-                                    <h6 class="mb-0">Advan RG-D2 18x9.0 +43 5-114.3 Machining & Black Gunmetallic Wheel</h6>
-                                </td>
-                                <td>
-                                    <div class="product-qty d-inline-flex align-items-center">
-                                        <button class="decrese">-</button>
-                                        <input type="text" value="01">
-                                        <button class="increase">+</button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="text-dark fw-bold me-2 d-lg-none">Unit Price:</span>
-                                    <span class="text-dark fw-bold">Rp41,000,000</span>
-                                </td>
-                                <td>
-                                    <span class="text-dark fw-bold me-2 d-lg-none">Total Price:</span>
-                                    <span class="text-dark fw-bold">Rp41,000,000</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="https://throtl.com/cdn/shop/products/group-9fd5e210-fafe-44dc-bddf-41be87e71aa0-800_920f5ec5-3725-4f0a-a5ca-8634f5e744b9_550x.jpg?v=1627198783" alt="product-thumb" class="img-fluid">
-                                </td>
-                                <td class="text-start product-title">
-                                    <h6 class="mb-0">GReddy T88-34D 22cm2 80mm Flange External Turbocharger</h6>
-                                </td>
-                                <td>
-                                    <div class="product-qty d-inline-flex align-items-center">
-                                        <button class="decrese">-</button>
-                                        <input type="text" value="01">
-                                        <button class="increase">+</button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="text-dark fw-bold me-2 d-lg-none">Unit Price:</span>
-                                    <span class="text-dark fw-bold">Rp41,600,000</span>
-                                </td>
-                                <td>
-                                    <span class="text-dark fw-bold me-2 d-lg-none">Total Price:</span>
-                                    <span class="text-dark fw-bold">Rp41,600,000</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="https://throtl.com/cdn/shop/products/04343cd3a9ec409f78d890a1605f673c_d7575ae2-646e-48c7-b5b5-6d7175a787c0_750x.jpg?v=1646425417" alt="product-thumb" class="img-fluid">
-                                </td>
-                                <td class="text-start product-title">
-                                    <h6 class="mb-0">Skunk2 Universal Exhaust Muffler 60mm (2.25in.) Exhaust System</h6>
-                                </td>
-                                <td>
-                                    <div class="product-qty d-inline-flex align-items-center">
-                                        <button class="decrese">-</button>
-                                        <input type="text" value="01">
-                                        <button class="increase">+</button>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="text-dark fw-bold me-2 d-lg-none">Unit Price:</span>
-                                    <span class="text-dark fw-bold">Rp2,800,000</span>
-                                </td>
-                                <td>
-                                    <span class="text-dark fw-bold me-2 d-lg-none">Total Price:</span>
-                                    <span class="text-dark fw-bold">Rp2,800,000</span>
-                                </td>
-                            </tr>
+                        @foreach($cart_items as $item)
+                        <tr>
+                            <td>
+                                <img src="{{ $item->image }}" alt="product-thumb" class="img-fluid">
+                            </td>
+                            <td class="text-start product-title">
+                                <h6 class="mb-0">{{ $item->nama_product }}</h6>
+                            </td>
+                            <td>
+                            <div class="product-qty d-inline-flex align-items-center">
+                                <button class="decrease" data-product-id="{{ $item->id_product }}">-</button>
+                                <input type="text" value="{{ $item->quantity }}" readonly>
+                                <button class="increase" data-product-id="{{ $item->id_product }}">+</button>
+                            </div>
+                            </td>
+                            <td>
+                                <span class="text-dark fw-bold me-2 d-lg-none">Unit Price:</span>
+                                <span class="text-dark fw-bold">Rp{{ number_format($item->price_unit, 0, ',', '.') }}</span>
+                            </td>
+                            <td>
+                                <span class="text-dark fw-bold me-2 d-lg-none">Total Price:</span>
+                                <span class="text-dark fw-bold">Rp{{ number_format($item->price_unit * $item->quantity, 0, ',', '.') }}</span>
+                            </td>
+                            <td>
+                                <span>
+                                <form action="{{ route('cart.destroy', $item->id_product) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit">Remove</button>
+                                </form>
+                                </span>
+                            </td>
+                        </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
                 <div class="row g-4">
-                    <div class="col-xl-7">
+                    <!--<div class="col-xl-7">
                         <div class="voucher-box py-7 px-5 position-relative z-1 overflow-hidden bg-white rounded mt-4">
                             <img src="">
                             <h4 class="mb-3">What would you like to do next?</h4>
@@ -271,8 +231,8 @@
                                 <button type="submit" class="btn btn-secondary flex-shrink-0">Apply Voucher</button>
                             </form>
                         </div>
-                    </div>
-                    <div class="col-xl-5">
+                    </div>-->
+                    <div class="col-xl-5 ms-auto">
                         <div class="cart-summery bg-white rounded-2 pt-4 pb-6 px-5 mt-4">
                             <table class="w-100">
                                 <tr>
@@ -280,7 +240,7 @@
                                         <h5 class="mb-0 fw-medium">Subtotal</h5>
                                     </td>
                                     <td class="py-3">
-                                        <h5 class="mb-0 fw-semibold text-end">Rp43,976,000</h5>
+                                        <h5 class="mb-0 fw-semibold text-end">Rp{{ number_format($subtotal, 0, ',', '.') }}</h5>
                                     </td>
                                 </tr>
                                 <tr class="border-top">
@@ -288,14 +248,23 @@
                                         <h5 class="mb-0">Total</h5>
                                     </td>
                                     <td class="text-end py-3">
-                                        <h5 class="mb-0">Rp43,976,000</h5>
+                                        <h5 class="mb-0">Rp{{ number_format($subtotal, 0, ',', '.') }}</h5>
                                     </td>
                                 </tr>
                             </table>
                             <p class="mb-5 mt-2">Shipping options will be updated during checkout.</p>
                             <div class="btns-group d-flex gap-3">
-                                <button type="submit" class="btn btn-primary btn-md rounded-1">Confirm Order</button>
-                                <button type="button" class="btn btn-outline-secondary border-secondary btn-md rounded-1">Continue Shopping</button>
+                            <form id="checkoutForm" action="{{ route('checkout') }}" method="POST">
+                            {{ csrf_field() }}
+                                <input type="hidden" id="checkout-quantity" name="quantity" value="">
+                                <input type="hidden" id="checkout-id-product" name="id_product" value="">
+
+                                <div class="btns-group d-flex gap-3">
+                                    <button type="submit" class="btn btn-primary btn-md rounded-1">Checkout</button>
+                                    <button type="button" class="btn btn-outline-secondary border-secondary btn-md rounded-1">Continue Shopping</button>
+                                </div>
+                            </form>
+
                             </div>
                         </div>
                     </div>
@@ -424,6 +393,54 @@
     </button>
     <!--scroll bottom to top button end-->
     <!--build:js-->
+    <script> 
+    document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.decrease').forEach(button => {
+        button.addEventListener('click', function() {
+            updateQuantity(this.dataset.productId, -1);
+        });
+    });
+
+        document.querySelectorAll('.increase').forEach(button => {
+            button.addEventListener('click', function() {
+            updateQuantity(this.dataset.productId, 1);
+        });
+        });
+    });
+
+    function updateCart(productId, quantity) {
+        fetch('/update-cart', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: JSON.stringify({
+                productId: productId,
+                quantity: quantity
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Optionally update the UI with new subtotal, etc.
+                console.log('Cart updated');
+            } else {
+                console.error('Error updating cart');
+            }
+        });
+    }
+    function updateQuantity(productId, change) {
+    const input = document.getElementById('checkout-quantity');
+    const idProductInput = document.getElementById('checkout-id-product');
+    const currentQuantity = parseInt(input.value) || 0;
+    const newQuantity = currentQuantity + change;
+    input.value = newQuantity;
+    idProductInput.value = productId;}
+   
+
+    </script>
+
     <script src="assets/js/vendors/jquery-3.6.0.min.js"></script>
     <script src="assets/js/vendors/jquery-ui.min.js"></script>
     <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>

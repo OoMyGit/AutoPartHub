@@ -84,16 +84,6 @@
                             <a href="javascript:void(0)">Products<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
                             <ul>
                                 <li><a href="{{ route('shop-grid') }}">Shop Grid</a></li>
-                                <li><a href="{{ route('shop-grid-2') }}">Shop Grid V2</a></li>
-                                <li><a href="{{ route('product-details') }}">Product Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
-                            <a href="javascript:void(0)">Blog<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
-                            <ul>
-                                <li><a href="{{ route('blog-grid') }}">Blog Grid</a></li>
-                                <li><a href="{{ route('blog-listing') }}">Blog List</a></li>
-                                <li><a href="{{ route('blog-details') }}">Blog Details</a></li>
                             </ul>
                         </li>
                         <li class="has-submenu">
@@ -104,12 +94,10 @@
                                 <li><a href="{{ route('cart') }}">Cart</a></li>
                                 <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
                                 <li><a href="{{ route('checkout') }}">Checkout</a></li>
-                                <li><a href="{{ route('invoice') }}">Invoice</a></li>
                                 <li><a href="{{ route('contact') }}">Contact</a></li>
                                 <li><a href="{{ route('team') }}">Team</a></li>
                                 <li><a href="{{ route('login') }}">Login</a></li>
                                 <li><a href="{{ route('signup') }}">Sign Up</a></li>
-                                <li><a href="404.html">404 Page</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -134,19 +122,19 @@
 
         <!--breadcrumb section start-->
         <div class="gstore-breadcrumb position-relative z-1 overflow-hidden mt--50">
-            <img src="storage/bg-shape-6.png" alt="bg-shape" class="position-absolute start-0 z--1 w-100 bg-shape">
-            <img src="assets/img/shapes/pata-xs.svg" alt="pata" class="position-absolute pata-xs z--1 vector-shape">
-            <img src="assets/img/shapes/onion.png" alt="onion" class="position-absolute z--1 onion start-0 top-0 vector-shape">
-            <img src="assets/img/shapes/frame-circle.svg" alt="frame circle" class="position-absolute z--1 frame-circle vector-shape">
-            <img src="assets/img/shapes/leaf.svg" alt="leaf" class="position-absolute z--1 leaf vector-shape">
-            <img src="assets/img/shapes/garlic-white.png" alt="garlic" class="position-absolute z--1 garlic vector-shape">
-            <img src="assets/img/shapes/roll-1.png" alt="roll" class="position-absolute z--1 roll vector-shape">
-            <img src="assets/img/shapes/roll-2.png" alt="roll" class="position-absolute z--1 roll-2 vector-shape">
-            <img src="assets/img/shapes/pata-xs.svg" alt="roll" class="position-absolute z--1 pata-xs-2 vector-shape">
-            <img src="assets/img/shapes/tomato-half.svg" alt="tomato" class="position-absolute z--1 tomato-half vector-shape">
-            <img src="assets/img/shapes/tomato-slice.svg" alt="tomato" class="position-absolute z--1 tomato-slice vector-shape">
-            <img src="assets/img/shapes/cauliflower.png" alt="tomato" class="position-absolute z--1 cauliflower vector-shape">
-            <img src="assets/img/shapes/leaf-gray.png" alt="tomato" class="position-absolute z--1 leaf-gray vector-shape">
+        <img src="storage/bg-shape-6.png" alt="bg-shape" class="position-absolute start-0 z--1 w-100 bg-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute pata-xs z--1 vector-shape">
+            <img src="storage/spark.svg" alt="spark" class="position-absolute z--1 onion start-0 top-0 vector-shape">
+            <img src="storage/wrench.svg" alt="wrench" class="position-absolute z--1 frame-circle vector-shape">
+            <img src="storage/suspension2.png" alt="suspension" class="position-absolute z--1 leaf vector-shape">
+            <img src="storage/dashboard.svg" alt="dashboard" class="position-absolute z--1 garlic vector-shape">
+            <img src="storage/exhaustpipe.png" alt="exhaustpipe" class="position-absolute z--1 roll vector-shape">
+            <img src="storage/muffler.svg" alt="muffler" class="position-absolute z--1 roll-2 vector-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute z--1 pata-xs-2 vector-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute z--1 tomato-half vector-shape">
+            <img src="storage/tire.png" alt="tire" class="position-absolute z--1 tomato-slice vector-shape">
+            <img src="storage/wrench.svg" alt="wrench" class="position-absolute z--1 cauliflower vector-shape">
+            <img src="storage/dashboard.svg" alt="dashboard" class="position-absolute z--1 leaf-gray vector-shape">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -180,118 +168,49 @@
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="team-card text-center bg-white rounded py-7 px-4">
                             <div class="team-thumb mb-5">
-                                <img src="assets/img/authors/team-1.jpg" alt="team" class="img-fluid rounded-circle">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
-                                </div>
+                                <img src="storage/fotokwan.jpg" alt="team" class="img-fluid rounded-circle"> 
                             </div>
-                            <h5>Frances Gilmartin</h5>
-                            <span>CEO & Founder</span>
+                            <h5>Kwandy Chandra</h5>
+                            <span>Founder & Programmer</span>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="team-card text-center bg-white rounded py-7 px-4">
                             <div class="team-thumb mb-5">
-                                <img src="assets/img/authors/team-2.jpg" alt="team" class="img-fluid rounded-circle">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
-                                </div>
+                                <img src="storage/fotojuan.jpg" alt="team" class="img-fluid rounded-circle">
                             </div>
-                            <h5>Frances Gilmartin</h5>
-                            <span>CEO & Founder</span>
+                            <h5>Juan Sebastian</h5>
+                            <span>Founder & Programmer</span>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="team-card text-center bg-white rounded py-7 px-4">
                             <div class="team-thumb mb-5">
-                                <img src="assets/img/authors/team-1.jpg" alt="team" class="img-fluid rounded-circle">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
-                                </div>
+                                <img src="storage/fotorick.jpg" alt="team" class="img-fluid rounded-circle">                                
                             </div>
-                            <h5>Frances Gilmartin</h5>
-                            <span>CEO & Founder</span>
+                            <h5>Ricky Jonathan Harianto</h5>
+                            <span>Founder & Programmer</span>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="team-card text-center bg-white rounded py-7 px-4">
                             <div class="team-thumb mb-5">
-                                <img src="assets/img/authors/team-2.jpg" alt="team" class="img-fluid rounded-circle">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
-                                </div>
+                                <img src="storage/fotokent.jpg" alt="team" class="img-fluid rounded-circle">                               
                             </div>
-                            <h5>Frances Gilmartin</h5>
-                            <span>CEO & Founder</span>
+                            <h5>Kent Lee Tjandra</h5>
+                            <span>Founder & Programmer</span>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-sm-6">
                         <div class="team-card text-center bg-white rounded py-7 px-4">
                             <div class="team-thumb mb-5">
-                                <img src="assets/img/authors/team-1.jpg" alt="team" class="img-fluid rounded-circle">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
-                                </div>
+                                <img src="storage/fotostev.jpg" alt="team" class="img-fluid rounded-circle">
                             </div>
-                            <h5>Frances Gilmartin</h5>
-                            <span>CEO & Founder</span>
+                            <h5>Steivan Henry Octavian</h5>
+                            <span>Founder & Programmer</span>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="team-card text-center bg-white rounded py-7 px-4">
-                            <div class="team-thumb mb-5">
-                                <img src="assets/img/authors/team-2.jpg" alt="team" class="img-fluid rounded-circle">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
-                                </div>
-                            </div>
-                            <h5>Frances Gilmartin</h5>
-                            <span>CEO & Founder</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="team-card text-center bg-white rounded py-7 px-4">
-                            <div class="team-thumb mb-5">
-                                <img src="assets/img/authors/team-1.jpg" alt="team" class="img-fluid rounded-circle">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
-                                </div>
-                            </div>
-                            <h5>Frances Gilmartin</h5>
-                            <span>CEO & Founder</span>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="team-card text-center bg-white rounded py-7 px-4">
-                            <div class="team-thumb mb-5">
-                                <img src="assets/img/authors/team-2.jpg" alt="team" class="img-fluid rounded-circle">
-                                <div class="team-social">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
-                                </div>
-                            </div>
-                            <h5>Frances Gilmartin</h5>
-                            <span>CEO & Founder</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-7">
-                    <a href="#" class="btn btn-secondary btn-md rounded-1">More Member</a>
+                    
                 </div>
             </div>
         </section>

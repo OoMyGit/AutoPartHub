@@ -14,7 +14,7 @@
     <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="16x16">
 
     <!--title-->
-    <title>Autoparthub - Edit Product - Autoparthub Automotive eCommerce Admin Page</title>
+    <title>Autoparthub - Product Details - Autoparthub Automotive eCommerce Website</title>
 
     <!--build:css-->
     <link rel="stylesheet" href="css/main.css">
@@ -52,9 +52,9 @@
                     <a href="#" class="btn btn-primary mt-4">About Us</a>
                 </div>
                 <div class="offcanvas-contact mt-5">
-                    <h5 class="mb-20">Contact Info</h5>
-                    <address>
-                        Surabaya, East Java, Indonesia <br />
+                <h5 class="mb-20" style="color:#191d28; font-size: 18px; font-weight: 600;">Contact Intod</h5>
+                <address>
+                        Chicago 12, Melborne City, Indonesia <br />
                         <a href="tel:+8801682648101">+8801682648101</a> <br />
                         <a href="mailto:info@example.com">info@example.com</a>
                     </address>
@@ -83,6 +83,8 @@
                             <a href="javascript:void(0)">Products<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
                             <ul>
                                 <li><a href="{{ route('shop-grid') }}">Shop Grid</a></li>
+                                <li><a href="{{ route('shop-grid-2') }}">Shop Grid V2</a></li>
+                              
                             </ul>
                         </li>
                         <li class="has-submenu">
@@ -106,14 +108,15 @@
                                 <li><a href="{{ route('team') }}">Team</a></li>
                                 <li><a href="{{ route('login') }}">Login</a></li>
                                 <li><a href="{{ route('signup') }}">Sign Up</a></li>
+                                <li><a href="404.html">404 Page</a></li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
                 <div class="contact-info mt-8">
-                    <h5 class="mb-20">Contact Info</h5>
-                    <address>
-                        Surabaya, East Java, Indonesia <br />
+                <h5 class="mb-20" style="color:#191d28; font-size: 18px; font-weight: 600;">Contact Intod</h5>
+                <address>
+                        Chicago 12, Melborne City, Indonesia <br />
                         <a href="tel:+8801682648101">+8801682648101</a> <br />
                         <a href="mailto:info@example.com">info@example.com</a>
                     </address>
@@ -130,7 +133,7 @@
 
         <!--breadcrumb section start-->
         <div class="gstore-breadcrumb position-relative z-1 overflow-hidden mt--50">
-            <img src="assets/img/shapes/bg-shape-6.png" alt="bg-shape" class="position-absolute start-0 z--1 w-100 bg-shape">
+            <img src="storage/bg-shape-6.png" alt="bg-shape" class="position-absolute start-0 z--1 w-100 bg-shape">
             <img src="assets/img/shapes/pata-xs.svg" alt="pata" class="position-absolute pata-xs z--1 vector-shape">
             <img src="assets/img/shapes/onion.png" alt="onion" class="position-absolute z--1 onion start-0 top-0 vector-shape">
             <img src="assets/img/shapes/frame-circle.svg" alt="frame circle" class="position-absolute z--1 frame-circle vector-shape">
@@ -377,7 +380,7 @@
                                         <div class="thumbnail position-relative rounded-2">
                                             <a href="#"><img src="https://down-id.img.susercontent.com/file/2c63f5b0f7f552a725e87a68434bb757" alt="product" class="img-fluid"></a>
                                             <div class="product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-2 rounded-2">
-                                                <a href="{{ route('product-details') }}" class="rounded-btn"><i class="fa-solid fa-eye"></i></a>
+                                                
                                             </div>
                                         </div>
                                         <div class="card-content mt-3 mt-sm-0">
@@ -400,7 +403,7 @@
                                         <div class="thumbnail position-relative rounded-2">
                                             <a href="#"><img src="https://throtl.com/cdn/shop/products/317b101225c2a2d30a15b30e561aec89_750x.jpg?v=1627458389" alt="product" class="img-fluid"></a>
                                             <div class="product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-2 rounded-2">
-                                                <a href="{{ route('product-details') }}" class="rounded-btn"><i class="fa-solid fa-eye"></i></a>
+                                                
                                             </div>
                                         </div>
                                         <div class="card-content mt-3 mt-sm-0">
@@ -423,7 +426,7 @@
                                         <div class="thumbnail position-relative rounded-2">
                                             <a href="#"><img src="https://throtl.com/cdn/shop/products/a88f4b554aee1d2afc32343e02ab6b90_750x.jpg?v=1691838012" alt="product" class="img-fluid"></a>
                                             <div class="product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-2 rounded-2">
-                                                <a href="{{ route('product-details') }}" class="rounded-btn"><i class="fa-solid fa-eye"></i></a>
+                                                
                                             </div>
                                         </div>
                                         <div class="card-content mt-3 mt-sm-0">
@@ -446,7 +449,7 @@
                                         <div class="thumbnail position-relative rounded-2">
                                             <a href="#"><img src="https://throtl.com/cdn/shop/products/05b2bc69ad57c42257cac4a54df2b65c_750x.jpg?v=1627476549" alt="product" class="img-fluid"></a>
                                             <div class="product-overlay position-absolute start-0 top-0 w-100 h-100 d-flex align-items-center justify-content-center gap-2 rounded-2">
-                                                <a href="{{ route('product-details') }}" class="rounded-btn"><i class="fa-solid fa-eye"></i></a>
+                                                
                                             </div>
                                         </div>
                                         <div class="card-content mt-3 mt-sm-0">

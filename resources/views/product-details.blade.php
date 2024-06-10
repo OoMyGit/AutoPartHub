@@ -246,10 +246,6 @@
                                         <h6 class="mb-2">Additional Information:</h6>
                                         <table class="w-100 product-info-table">
                                             <tr>
-                                                <td class="text-dark fw-semibold">Category</td>
-                                                <td>{{ $product->nama_category }}</td>
-                                            </tr>
-                                            <tr>
                                                 <td class="text-dark fw-semibold">Weight</td>
                                                 <td>{{ $product->weight }}</td>
                                             </tr>
@@ -698,7 +694,7 @@
 
         @include('footerheader.footer')
 
-        <!--modal box-->
+        <!--modal box
 
         <div class="modal fade" id="quickview_modal">
             <div class="modal-dialog modal-dialog-centered">
@@ -806,7 +802,7 @@
                     </div>
                 </div>
             </div>
-        </div> <!--modal box end-->
+        </div> modal box end-->
 
     </div>
 

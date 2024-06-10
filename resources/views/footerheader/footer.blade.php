@@ -1,21 +1,21 @@
 
         <!--footer section start-->
         <div class="footer-curve position-relative overflow-hidden">
-            <span class="position-absolute section-curve-wrapper top-0 h-100" data-background="storage/section-curve.png"></span>
+            <span class="position-absolute section-curve-wrapper top-0 h-100" data-background="{{asset('storage/section-curve.png')}}"></span>
         </div>
         <footer class="gshop-footer position-relative pt-8 bg-dark z-1 overflow-hidden">
-            <img src="storage/tire.png" alt="tire" class="position-absolute z--1 tomato vector-shape">
-            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute z--1 pata-lg vector-shape">
-            <img src="storage/spark.svg" alt="spark" class="position-absolute z--1 pata-xs vector-shape">
-            <img src="storage/wrench.svg" alt="wrench" class="position-absolute z--1 frame-circle vector-shape">
-            <img src="storage/suspension2.png" alt="suspension" class="position-absolute z--1 leaf vector-shape">
+            <img src="{{asset('storage/tire.png')}}" alt="tire" class="position-absolute z--1 tomato vector-shape">
+            <img src="{{asset('storage/gasoline.svg')}}" alt="gasoline" class="position-absolute z--1 pata-lg vector-shape">
+            <img src="{{asset('storage/spark.svg')}}" alt="spark" class="position-absolute z--1 pata-xs vector-shape">
+            <img src="{{asset('storage/wrench.svg')}}" alt="wrench" class="position-absolute z--1 frame-circle vector-shape">
+            <img src="{{asset('storage/suspension2.png')}}" alt="suspension" class="position-absolute z--1 leaf vector-shape">
             <!--shape right -->
-            <img src="storage/dashboard.svg" alt="dashboard" class="position-absolute leaf-2 z--1 vector-shape">
-            <img src="storage/exhaustpipe.png" alt="exhaustpipe" class="position-absolute pata-xs-2 z--1 vector-shape">
-            <img src="storage/muffler.svg" alt="muffler" class="position-absolute tomato-slice vector-shape z--1">
-            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute tomato-half z--1 vector-shape">
+            <img src="{{asset('storage/dashboard.svg')}}" alt="dashboard" class="position-absolute leaf-2 z--1 vector-shape">
+            <img src="{{asset('storage/exhaustpipe.png')}}" alt="exhaustpipe" class="position-absolute pata-xs-2 z--1 vector-shape">
+            <img src="{{asset('storage/muffler.svg')}}" alt="muffler" class="position-absolute tomato-slice vector-shape z--1">
+            <img src="{{asset('storage/gasoline.svg')}}" alt="gasoline" class="position-absolute tomato-half z--1 vector-shape">
             <div class="container">
-                <div class="row justify-content-center">
+                <!--<div class="row justify-content-center">
                     <div class="col-xl-5 col-lg-6">
                         <div class="gshop_subscribe_form text-center">
                             <h4 class="text-white gshop-title">Subscribe to the Autoparthub <mark class="p-0 position-relative text-secondary bg-transparent">New Arrivals <img src="assets/img/shapes/border-line.svg" alt="border line" class="position-absolute border-line"></mark><br class="d-none d-sm-block">& Other Information.</h4>
@@ -25,9 +25,12 @@
                             </form>
                         </div>
                     </div>
+                </div>-->
+                <!-- <span class="gradient-spacer my-8 d-block"></span> -->
+                <div>
+                    <h1 class="text-center text-secondary">Thankyou For Shopping!!</h1>
                 </div>
-                <span class="gradient-spacer my-8 d-block"></span>
-                <div class="row g-5">
+                <!-- <div class="row g-5">
                     <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                         <div class="footer-widget">
                             <h5 class="text-white mb-4">Category</h5>
@@ -80,7 +83,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
             <div class="footer-copyright pt-120 pb-3">
                 <span class="gradient-spacer d-block mb-3"></span>
@@ -93,22 +96,22 @@
                         </div>
                         <div class="col-lg-4 d-none d-lg-block">
                             <div class="logo-wrapper text-center">
-                                <a href="{{ route('index') }}" class="logo"><img src="storage/logo2.png" alt="logo" class="img-fluid"></a>
+                                <a href="{{ route('index') }}" class="logo"><img src="{{asset('storage/logo2.png')}}" alt="logo" class="img-fluid"></a>
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="footer-payments-info d-flex align-items-center justify-content-lg-end gap-2">
                                 <div class="supported-payment-box rounded-1 bg-dark-light d-inline-flex align-items-center justify-content-center p-2 flex-shrink-0">
-                                    <img src="storage/visa2.png" alt="visa" class="img-fluid">
+                                    <img src="{{asset('storage/visa2.png')}}" alt="visa" class="img-fluid">
                                 </div>
                                 <div class="supported-payment-box rounded-1 bg-dark-light d-inline-flex align-items-center justify-content-center p-2 flex-shrink-0">
-                                    <img src="storage/mastercard2.png" alt="mastercard" class="img-fluid">
+                                    <img src="{{asset('storage/mastercard2.png')}}" alt="mastercard" class="img-fluid">
                                 </div>
                                 <div class="supported-payment-box rounded-1 bg-dark-light d-inline-flex align-items-center justify-content-center p-2 flex-shrink-0">
-                                    <img src="storage/bca2.png" alt="bca" class="img-fluid">
+                                    <img src="{{asset('storage/bca2.png')}}" alt="bca" class="img-fluid">
                                 </div>
                                 <div class="supported-payment-box rounded-1 bg-dark-light d-inline-flex align-items-center justify-content-center p-2 flex-shrink-0">
-                                    <img src="storage/ovo.jpg" alt="ovo" class="img-fluid">
+                                    <img src="{{asset('storage/ovo.jpg')}}" alt="ovo" class="img-fluid">
                                 </div>
                             </div>
                         </div>

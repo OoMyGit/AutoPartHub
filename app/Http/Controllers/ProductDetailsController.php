@@ -10,32 +10,14 @@ class ProductDetailsController extends Controller
     public function ProductDetails(Request $request, $id)
     {
         // Fetch product details using raw SQL query
-        $product = DB::table('product')
-            ->join('category', 'product.id_category', '=', 'category.id_category')
-            ->select('product.*', 'category.nama_category')
-            ->where('product.id_product', $id)
-            ->first();
+        $product = DB::table('product')->where('id_product', $id)->first();
 
-        // Check if product exists
         if (!$product) {
-            abort(404);
+            abort(404, 'Product not found');
         }
-
-        return view('product-details', compact('product'));
+        $other = DB::table('product')->where('id_product', '!=', $id)->limit(5)->get();
+        return view('product-details2', ['product'=>$product, 'other' =>$other]);
     }
     
-    public function updateQuantity(Request $request, $id)
-    {
-        $newQuantity = $request->input('quantity');
-
-        if ($newQuantity >= 0) {
-            DB::table('product')
-                ->where('id_product', $id)
-                ->update(['stock' => $newQuantity]);
-
-            return response()->json(['success' => true, 'quantity' => $newQuantity]);
-        } else {
-            return response()->json(['success' => false, 'message' => 'Quantity cannot be negative']);
-        }
-    }
+   
 }

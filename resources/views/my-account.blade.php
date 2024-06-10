@@ -84,27 +84,16 @@
                             <a href="javascript:void(0)">Products<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
                             <ul>
                                 <li><a href="{{ route('shop-grid') }}">Shop Grid</a></li>
-                                <li><a href="{{ route('shop-grid-2') }}">Shop Grid V2</a></li>
-                                <li><a href="{{ route('product-details') }}">Product Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
-                            <a href="javascript:void(0)">Blog<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
-                            <ul>
-                                <li><a href="{{ route('blog-grid') }}">Blog Grid</a></li>
-                                <li><a href="{{ route('blog-listing') }}">Blog List</a></li>
-                                <li><a href="{{ route('blog-details') }}">Blog Details</a></li>
                             </ul>
                         </li>
                         <li class="has-submenu">
                             <a href="javascript:void(0)">Pages<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
                             <ul>
                                 <li><a href="{{ route('about') }}">About Us</a></li>
-                                        <li><a href="{{ route('my-account') }}">My Account</a></li>
+                                <li><a href="{{ route('my-account') }}">My Account</a></li>
                                 <li><a href="{{ route('cart') }}">Cart</a></li>
                                 <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
                                 <li><a href="{{ route('checkout') }}">Checkout</a></li>
-                                <li><a href="{{ route('invoice') }}">Invoice</a></li>
                                 <li><a href="{{ route('contact') }}">Contact</a></li>
                                 <li><a href="{{ route('team') }}">Team</a></li>
                                 <li><a href="{{ route('login') }}">Login</a></li>
@@ -140,19 +129,19 @@
                         <img src="assets/img/authors/avatar.gif" alt="avatar" class="img-fluid" />
                     </div>
                     <div class="profile-inf-right">
-                        <h4 class="mb-2">Ayam Goreng</h4>
+                        <h4 class="mb-2">{{$user->name}}</h4>
                         <div class="info-meta d-flex align-items-center gap-2 gap-md-4 fs-xs flex-wrap">
                             <span>
                   <i class="fa-solid fa-location-pin me-2"></i>
-                  Denver, West Surabaya, East Java - Indonesia
+                  {{$user->address}}, {{$user->province}}, {{$user->city}}, {{$user->postal_code}}
                 </span>
                             <span>
                   <i class="fa-solid fa-phone me-2"></i>
-                  +62 8123 2390 099
+                 {{$user->phone_number}}
                 </span>
                             <span>
                   <i class="fa-solid fa-envelope me-2"></i>
-                  ayamgoreng@gmail.com
+                  {{$user->email}}
                 </span>
                         </div>
                         <div class="profile-achievements d-flex align-items-center flex-wrap mt-4">
@@ -178,15 +167,15 @@
                     </svg>
                   </span>
                                 <div>
-                                    <h4 class="mb-1">4k+</h4>
+                                    <h4 class="mb-1">{{$jumlah}}</h4>
                                     <span>Total Order</span>
                                 </div>
                             </div>
-                            <div class="achievement-box d-flex align-items-center gap-3">
+                            <!-- <div class="achievement-box d-flex align-items-center gap-3">
                                 <span
                     class="icon bg-color-2 d-inline-flex align-items-center justify-content-center flex-shrink-0 bg-color-1 rounded-3"
-                  >
-                    <svg
+                  > -->
+                    <!-- <svg
                       width="32"
                       height="32"
                       viewBox="0 0 32 32"
@@ -209,18 +198,18 @@
                         d="M27.8531 16.3468C27.8531 16.5064 27.7906 16.6594 27.6795 16.7723C27.5684 16.8852 27.4177 16.9486 27.2606 16.9486H26.2209C26.193 16.9473 26.1655 16.9547 26.142 16.9699C26.1184 16.9851 26.1001 17.0073 26.0894 17.0334C26.0772 17.0577 26.0728 17.0852 26.0767 17.1122C26.0806 17.1392 26.0927 17.1642 26.1113 17.1839L28.9277 20.5082C28.9391 20.5275 28.9552 20.5435 28.9744 20.5546C28.9937 20.5657 29.0155 20.5716 29.0376 20.5716C29.0598 20.5716 29.0816 20.5657 29.1008 20.5546C29.1201 20.5435 29.1362 20.5275 29.1475 20.5082L31.9645 17.1833C31.9831 17.1636 31.9952 17.1386 31.9992 17.1116C32.0031 17.0846 31.9987 17.0571 31.9865 17.0328C31.9757 17.0068 31.9573 16.9847 31.9338 16.9697C31.9102 16.9546 31.8827 16.9472 31.8549 16.9486H30.8152C30.6581 16.9486 30.5074 16.8852 30.3963 16.7723C30.2852 16.6594 30.2228 16.5064 30.2228 16.3468C30.2254 13.7415 29.5603 11.1805 28.293 8.91549C27.0258 6.6505 25.1999 4.75959 22.9951 3.42871C22.8085 4.17796 22.3989 4.85047 21.8221 5.35444L21.7148 5.44832C23.5882 6.5595 25.1413 8.15114 26.2185 10.0638C27.2958 11.9765 27.8595 14.1432 27.8531 16.3468V16.3468Z"
                         fill="#FBA700"
                       />
-                    </svg>
+                    </svg> -->
                   </span>
-                                <div>
+                                <!-- <div>
                                     <h4 class="mb-1">10+</h4>
                                     <span>Order Processing</span>
-                                </div>
-                            </div>
+                                </div> -->
+                            <!-- </div>
                             <div class="achievement-box d-flex align-items-center gap-3">
                                 <span
                     class="icon bg-color-3 d-inline-flex align-items-center justify-content-center flex-shrink-0 bg-color-1 rounded-3"
-                  >
-                    <svg
+                  > -->
+                    <!-- <svg
                       width="32"
                       height="32"
                       viewBox="0 0 32 32"
@@ -262,8 +251,8 @@
                           <rect width="32" height="32" fill="white" />
                         </clipPath>
                       </defs>
-                    </svg>
-                  </span>
+                    </svg> -->
+                  <!-- </span>
                                 <div>
                                     <h4 class="mb-1">3.5k+</h4>
                                     <span>Total Delivered</span>
@@ -301,9 +290,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="row g-4">
-                    <div class="col-xl-3">
+                    <!-- <div class="col-xl-3">
                         <div class="account-nav bg-white rounded py-5">
                             <h6 class="mb-4 px-4">Manage My Account</h6>
                             <ul class="nav nav-tabs border-0 d-block account-nav-menu">
@@ -516,13 +505,13 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-xl-9">
+                    </div>-->
+                    <!-- <div class="col-xl-9">
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="dashboard">
                                 <div class="address-book bg-white rounded p-5">
                                     <div class="row g-6">
-                                        <div class="col-md-6">
+                                        <<div class="col-md-6">
                                             <div class="address-book-content pe-md-4 border-right position-relative">
                                                 <div class="d-flex align-items-center gap-5 mb-4">
                                                     <h6 class="mb-0">Address Book</h6>
@@ -969,8 +958,8 @@
                                                     <th scope="col">Status Info</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
+                                            <tbody> -->
+                                                <!-- <tr>
                                                     <td> 14 Feb 2023 - 13:19 </td>
                                                     <td>Your package has been delivered. Thank
                                                         you for shopping at Autoparthub!</td>
@@ -994,8 +983,8 @@
                                                     <td>12 Feb 2023 - 13:05</td>
                                                     <td>Thank you for shopping at GroStore! Your
                                                         order is being verified.</td>
-                                                </tr>
-                                            </tbody>
+                                                </tr> -->
+                                            <!-- </tbody> -->
                                         </table>
                                     </div>
                                 </div>

@@ -83,16 +83,6 @@
                             <a href="javascript:void(0)">Products<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
                             <ul>
                                 <li><a href="{{ route('shop-grid') }}">Shop Grid</a></li>
-                                <li><a href="{{ route('shop-grid-2') }}">Shop Grid V2</a></li>
-                                <li><a href="{{ route('product-details') }}">Product Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
-                            <a href="javascript:void(0)">Blog<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
-                            <ul>
-                                <li><a href="{{ route('blog-grid') }}">Blog Grid</a></li>
-                                <li><a href="{{ route('blog-listing') }}">Blog List</a></li>
-                                <li><a href="{{ route('blog-details') }}">Blog Details</a></li>
                             </ul>
                         </li>
                         <li class="has-submenu">
@@ -133,18 +123,18 @@
         <!--breadcrumb section start-->
         <div class="gstore-breadcrumb position-relative z-1 overflow-hidden mt--50">
             <img src="storage/bg-shape-6.png" alt="bg-shape" class="position-absolute start-0 z--1 w-100 bg-shape">
-            <img src="assets/img/shapes/pata-xs.svg" alt="pata" class="position-absolute pata-xs z--1 vector-shape">
-            <img src="assets/img/shapes/onion.png" alt="onion" class="position-absolute z--1 onion start-0 top-0 vector-shape">
-            <img src="assets/img/shapes/frame-circle.svg" alt="frame circle" class="position-absolute z--1 frame-circle vector-shape">
-            <img src="assets/img/shapes/leaf.svg" alt="leaf" class="position-absolute z--1 leaf vector-shape">
-            <img src="assets/img/shapes/garlic-white.png" alt="garlic" class="position-absolute z--1 garlic vector-shape">
-            <img src="assets/img/shapes/roll-1.png" alt="roll" class="position-absolute z--1 roll vector-shape">
-            <img src="assets/img/shapes/roll-2.png" alt="roll" class="position-absolute z--1 roll-2 vector-shape">
-            <img src="assets/img/shapes/pata-xs.svg" alt="roll" class="position-absolute z--1 pata-xs-2 vector-shape">
-            <img src="assets/img/shapes/tomato-half.svg" alt="tomato" class="position-absolute z--1 tomato-half vector-shape">
-            <img src="assets/img/shapes/tomato-slice.svg" alt="tomato" class="position-absolute z--1 tomato-slice vector-shape">
-            <img src="assets/img/shapes/cauliflower.png" alt="tomato" class="position-absolute z--1 cauliflower vector-shape">
-            <img src="assets/img/shapes/leaf-gray.png" alt="tomato" class="position-absolute z--1 leaf-gray vector-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute pata-xs z--1 vector-shape">
+            <img src="storage/spark.svg" alt="spark" class="position-absolute z--1 onion start-0 top-0 vector-shape">
+            <img src="storage/wrench.svg" alt="wrench" class="position-absolute z--1 frame-circle vector-shape">
+            <img src="storage/suspension2.png" alt="suspension" class="position-absolute z--1 leaf vector-shape">
+            <img src="storage/dashboard.svg" alt="dashboard" class="position-absolute z--1 garlic vector-shape">
+            <img src="storage/exhaustpipe.png" alt="exhaustpipe" class="position-absolute z--1 roll vector-shape">
+            <img src="storage/muffler.svg" alt="muffler" class="position-absolute z--1 roll-2 vector-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute z--1 pata-xs-2 vector-shape">
+            <img src="storage/gasoline.svg" alt="gasoline" class="position-absolute z--1 tomato-half vector-shape">
+            <img src="storage/tire.png" alt="tire" class="position-absolute z--1 tomato-slice vector-shape">
+            <img src="storage/wrench.svg" alt="wrench" class="position-absolute z--1 cauliflower vector-shape">
+            <img src="storage/dashboard.svg" alt="dashboard" class="position-absolute z--1 leaf-gray vector-shape">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -166,12 +156,12 @@
 
         <!--about section start-->
         <section class="pt-120 ab-about-section position-relative z-1 overflow-hidden">
-            <img src="assets/img/shapes/mango.png" alt="mango" class="position-absolute mango z--1">
+            <img src="storage/logo.jpg" alt="mango" class="position-absolute mango z--1">
             <div class="container">
                 <div class="row g-5 g-xl-4 align-items-center">
                     <div class="col-xl-6">
                         <div class="ab-left position-relative">
-                            <img src="assets/img/about/ab-1.png" alt="image" class="img-fluid">
+                            <img src="storage/sparepart.png" alt="sparepart" class="img-fluid">
                             <div class="text-end">
                                 <div class="ab-quote p-4 text-start">
                                     <h4 class="mb-0 fw-normal text-white">“Unleash the Full Potential of Your Race Car with Our Premium Spare Parts!” <span class="fs-md fw-medium position-relative"></span></h4>
@@ -250,142 +240,6 @@
             </div>
         </section> <!--brands section end-->
 
-        <!--feature section start-->
-        <section class="about-section bg-shade position-relative z-1">
-            <img src="storage/bg-shape-5.png" alt="bg shape" class="position-absolute start-0 bottom-0 z--1 w-100">
-            <img src="assets/img/shapes/roll-color.png" alt="roll" class="position-absolute roll-color z--1" data-parallax='{"y": -50}'>
-            <img src="assets/img/shapes/roll-color-curve.png" alt="roll" class="position-absolute roll-color-curve z--1" data-parallax='{"y": 50}'>
-            <img src="assets/img/shapes/onion-color.png" alt="onion" class="position-absolute onion-color z--1" data-parallax='{"x": -30}'>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6">
-                        <div class="section-title text-center">
-                            <h2 class="mb-3">Our Working Ability</h2>
-                            <p class="mb-0">Assertively target market lorem ipsum is simply free text available dolor incididunt simply free ut labore et dolore.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center g-4 mt-4">
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="horizontal-counter d-flex align-items-center gap-3 bg-white rounded p-4">
-                            <span class="icon-wrapper d-inline-flex align-items-center justify-content-center flex-shrink-0">
-                              <img src="assets/img/icons/icon-1.png" alt="icon" class="img-fluid">
-                          </span>
-                            <div class="numbers">
-                                <h3 class="mb-1"><span class="counter">3256</span>k+</h3>
-                                <h6 class="mb-0 text-gray fs-sm">Total Products</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="horizontal-counter d-flex align-items-center gap-3 bg-white rounded p-4">
-                            <span class="icon-wrapper d-inline-flex align-items-center justify-content-center flex-shrink-0">
-                              <img src="assets/img/icons/icon-2.png" alt="icon" class="img-fluid">
-                          </span>
-                            <div class="numbers">
-                                <h3 class="mb-1"><span class="counter">2456</span>k+</h3>
-                                <h6 class="mb-0 text-gray fs-sm">Total Orders</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="horizontal-counter d-flex align-items-center gap-3 bg-white rounded p-4">
-                            <span class="icon-wrapper d-inline-flex align-items-center justify-content-center flex-shrink-0">
-                              <img src="assets/img/icons/icon-3.png" alt="icon" class="img-fluid">
-                          </span>
-                            <div class="numbers">
-                                <h3 class="mb-1"><span class="counter">1250</span>k+</h3>
-                                <h6 class="mb-0 text-gray fs-sm">Total Visitors</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-sm-6">
-                        <div class="horizontal-counter d-flex align-items-center gap-3 bg-white rounded p-4">
-                            <span class="icon-wrapper d-inline-flex align-items-center justify-content-center flex-shrink-0">
-                              <img src="assets/img/icons/icon-4.png" alt="icon" class="img-fluid">
-                          </span>
-                            <div class="numbers">
-                                <h3 class="mb-1"><span class="counter">1245</span>k+</h3>
-                                <h6 class="mb-0 text-gray fs-sm">Total Delivery</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> <!--feature section end-->
-
-        <!--feedback section start-->
-        <section class="feedback-section pt-100 pb-120 position-relative z-1 overflow-hidden service-section">
-            <img src="storage/bg-shape-4.png" alt="bg shape" class="position-absolute start-0 bottom-0 w-100 z--1 bg-shape">
-            <div class="container">
-                <div class="row align-items-center g-4">
-                    <div class="col-xl-7">
-                        <div class="clients_thumb">
-                            <img src="assets/img/about/clients.png" alt="clients" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="col-xl-5">
-                        <div class="swiper feedback-slider-2">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide feedback-card bg-white rounded py-6 px-4">
-                                    <div class="d-flex align-items-center gap-4 flex-wrap mb-4">
-                                        <img src="assets/img/authors/client-1.png" alt="client" class="img-fluid rounded-circle flex-shrink-0">
-                                        <div class="clients-info">
-                                            <h5 class="mb-1">George Nakashima</h5>
-                                            <ul class="d-flex align-items-center fs-xs text-warning">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <p class="mb-0">“Conveniently synergize premium collaboration and idea-sharing with compelling "outside the box" thinking. Interactivel product distinctive paradigms whereas one-to-one intellectual capital. resource sucking services. Objectively customize vertical.”</p>
-                                </div>
-                                <div class="swiper-slide feedback-card bg-white rounded py-6 px-4">
-                                    <div class="d-flex align-items-center gap-4 flex-wrap mb-4">
-                                        <img src="assets/img/authors/client-2.png" alt="client" class="img-fluid rounded-circle flex-shrink-0">
-                                        <div class="clients-info">
-                                            <h5 class="mb-1">George Nakashima</h5>
-                                            <ul class="d-flex align-items-center fs-xs text-warning">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <p class="mb-0">“Conveniently synergize premium collaboration and idea-sharing with compelling "outside the box" thinking. Interactivel product distinctive paradigms whereas one-to-one intellectual capital. resource sucking services. Objectively customize vertical.”</p>
-                                </div>
-                                <div class="swiper-slide feedback-card bg-white rounded py-6 px-4">
-                                    <div class="d-flex align-items-center gap-4 flex-wrap mb-4">
-                                        <img src="assets/img/authors/client-3.png" alt="client" class="img-fluid rounded-circle flex-shrink-0">
-                                        <div class="clients-info">
-                                            <h5 class="mb-1">George Nakashima</h5>
-                                            <ul class="d-flex align-items-center fs-xs text-warning">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <p class="mb-0">“Conveniently synergize premium collaboration and idea-sharing with compelling "outside the box" thinking. Interactivel product distinctive paradigms whereas one-to-one intellectual capital. resource sucking services. Objectively customize vertical.”</p>
-                                </div>
-                            </div>
-                            <div class="slider-arrows text-end mt-5">
-                                <button type="button" class="fd2-arrow-left"><i class="fas fa-angle-left"></i></button>
-                                <button type="button" class="fd2-arrow-right"><i class="fas fa-angle-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> <!--feedback section end-->
-
         <!--team section start-->
         <section class="grostore-team-section pt-6 bg-shade position-relative z-1 overflow-hidden">
             <img src="storage/bg-shape-5.png" alt="bg shape" class="position-absolute start-0 bottom-0 z--1 w-100">
@@ -402,8 +256,8 @@
                                   </svg>
                               </span>
                             </div>
-                            <h2 class="mb-3">Our Online Customer Help! Member</h2>
-                            <p class="mb-7">Rationally encounter extremely painful there anyone.</p>
+                            <h2 class="mb-3">Our Team Member</h2>
+                            <p class="mb-7">Working Team to Develop this Website.</p>
                             <div class="d-flex align-items-center gap-3">
                                 <button type="button" class="team-slider-prev-btn team-slider-btn"><i class="fas fa-angle-left"></i></button>
                                 <button type="button" class="team-slider-next-btn team-slider-btn"><i class="fas fa-angle-right"></i></button>
@@ -415,64 +269,45 @@
                             <div class="swiper-wrapper">
                                 <div class="team-card text-center bg-white rounded py-7 px-4 swiper-slide">
                                     <div class="team-thumb mb-5">
-                                        <img src="assets/img/authors/team-1.jpg" alt="team" class="img-fluid rounded-circle">
-                                        <div class="team-social">
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                            <a href="#"><i class="fab fa-behance"></i></a>
-                                        </div>
+                                        <img src="storage/fotokwan.jpg" alt="team" class="img-fluid rounded-circle">
                                     </div>
                                     <h5>Kwandy Chandra</h5>
                                     <span>Founder &amp; Programmer</span>
                                 </div>
+
                                 <div class="team-card text-center bg-white rounded py-7 px-4 swiper-slide">
                                     <div class="team-thumb mb-5">
-                                        <img src="assets/img/authors/team-2.jpg" alt="team" class="img-fluid rounded-circle">
-                                        <div class="team-social">
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                            <a href="#"><i class="fab fa-behance"></i></a>
-                                        </div>
+                                        <img src="storage/fotojuan.jpg" alt="team" class="img-fluid rounded-circle">
+                                </div>
+                                    <h5>Juan Sebastian Prasetyo</h5>
+                                    <span>Founder &amp; Programmer</span>
+                                </div>
+
+                                <div class="team-card text-center bg-white rounded py-7 px-4 swiper-slide">
+                                    <div class="team-thumb mb-5">
+                                        <img src="storage/fotorick.jpg" alt="team" class="img-fluid rounded-circle">
+                                    </div>
+                                    <h5>Ricky Jonathan Harianto</h5>
+                                    <span>Founder &amp; Programmer</span>
+                                </div>
+
+                                <div class="team-card text-center bg-white rounded py-7 px-4 swiper-slide">
+                                    <div class="team-thumb mb-5">
+                                        <img src="storage/fotokent.jpg" alt="team" class="img-fluid rounded-circle">
+                                        
                                     </div>
                                     <h5>Kent Lee Tjandra</h5>
                                     <span>Founder &amp; Programmer</span>
                                 </div>
+                               
                                 <div class="team-card text-center bg-white rounded py-7 px-4 swiper-slide">
                                     <div class="team-thumb mb-5">
-                                        <img src="assets/img/authors/team-1.jpg" alt="team" class="img-fluid rounded-circle">
-                                        <div class="team-social">
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                            <a href="#"><i class="fab fa-behance"></i></a>
-                                        </div>
-                                    </div>
-                                    <h5>Juan Sebastian Prasetyo</h5>
-                                    <span>Founder &amp; Programmer</span>
-                                </div>
-                                <div class="team-card text-center bg-white rounded py-7 px-4 swiper-slide">
-                                    <div class="team-thumb mb-5">
-                                        <img src="assets/img/authors/team-2.jpg" alt="team" class="img-fluid rounded-circle">
-                                        <div class="team-social">
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                            <a href="#"><i class="fab fa-behance"></i></a>
-                                        </div>
+                                        <img src="storage/fotostev.jpg" alt="team" class="img-fluid rounded-circle">
                                     </div>
                                     <h5>Steivan Henry Octavian</h5>
                                     <span>Founder &amp; Programmer</span>
                                 </div>
-                                <div class="team-card text-center bg-white rounded py-7 px-4 swiper-slide">
-                                    <div class="team-thumb mb-5">
-                                        <img src="assets/img/authors/team-2.jpg" alt="team" class="img-fluid rounded-circle">
-                                        <div class="team-social">
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                            <a href="#"><i class="fab fa-behance"></i></a>
-                                        </div>
-                                    </div>
-                                    <h5>Ricky Jonathan Harianto Tjahjono</h5>
-                                    <span>Founder &amp; Programmer</span>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -480,38 +315,19 @@
             </div>
         </section> <!--team section end-->
 
-        <!--call to action start-->
-        <section class="cta-section pb-120">
-            <div class="container">
-                <div class="cta-box rounded text-center" data-background="assets/img/banner/cta-banner.jpg">
-                    <div class="d-flex align-items-center justify-content-center flex-wrap gap-2 mb-2">
-                        <h6 class="mb-0 text-secondary gshop-subtitle">Weekend Offer</h6>
-                        <span>
-                          <svg width="58" height="10" viewBox="0 0 58 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <line x1="-6.99382e-08" y1="5.2" x2="52" y2="5.2" stroke="#FF7C08" stroke-width="1.6"/>
-                              <path d="M58 5L50.5 9.33013L50.5 0.669872L58 5Z" fill="#FF7C08"/>
-                          </svg>   
-                      </span>
-                    </div>
-                    <h3 class="mb-5">Automotive Sparepart Up to 40% off</h3>
-                    <a href="{{ route('shop-grid') }}" class="btn btn-secondary">Shop Now<span class="ms-2"><i class="fas fa-arrow-right"></i></span></a>
-                </div>
-            </div>
-        </section> <!--call to action end-->
-
         <!--about us section-->
         <section class="about-us-section pb-120">
             <div class="container">
                 <div class="row g-4 align-items-center">
                     <div class="col-xl-5">
                         <div class="about-us-left position-relative">
-                            <img src="assets/img/about/ab-2.png" alt="not found" class="img-fluid">
-                            <div class="exp-box p-3 bg-white rounded-circle position-absolute">
-                                <div class="bg-secondary w-100 h-100 rounded-circle d-flex align-items-center justify-content-center flex-column">
-                                    <h2 class="text-white">14+</h2>
+                            <img src="storage/logos.png" alt="not found" class="img-fluid">
+                            <!-- <div class="exp-box p-3 bg-white rounded-circle position-absolute">
+                                 <div class="bg-secondary w-100 h-100 rounded-circle d-flex align-items-center justify-content-center flex-column">
+                                    <h2 class="text-white">2+</h2>
                                     <span class="h6 text-white">Year's Experience</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="col-xl-7">
@@ -527,7 +343,7 @@
                                   </span>
                                 </div>
                                 <h2 class="mb-3">We do not Buy from the Open Market</h2>
-                                <p class="mb-0">Compellingly fashion intermandated opportunities and multimedia based fnsparent e-business.</p>
+                                <p class="mb-0">We ensure the quality and reliability of our products by sourcing directly from trusted manufacturers. This guarantees that you receive only the best, without any compromise.</p>
                             </div>
                             <div class="row g-3">
                                 <div class="col-md-6">
@@ -537,7 +353,7 @@
                                       </span>
                                         <div class="content-right">
                                             <h5 class="mb-3">Trusted Partner</h5>
-                                            <p class="mb-0">Compellingly fashion intermandat opportunities e-business fashion intermandated business.</p>
+                                            <p class="mb-0">We are your reliable partner in the industry, consistently delivering excellence and building lasting relationships based on trust and integrity.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -548,7 +364,7 @@
                                       </span>
                                         <div class="content-right">
                                             <h5 class="mb-3">Return Policy</h5>
-                                            <p class="mb-0">Compellingly fashion intermandat opportunities e-business fashion intermandated business.</p>
+                                            <p class="mb-0">We offer a hassle-free return policy to ensure your complete satisfaction. If you're not happy with your purchase, returning it is easy and straightforward.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -559,7 +375,7 @@
                                       </span>
                                         <div class="content-right">
                                             <h5 class="mb-3">100% Premium Sparepart</h5>
-                                            <p class="mb-0">Compellingly fashion intermandat opportunities e-business fashion intermandated business.</p>
+                                            <p class="mb-0">Our products are made from 100% premium spare parts, ensuring durability and top performance. We never settle for less when it comes to quality.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -570,7 +386,7 @@
                                       </span>
                                         <div class="content-right">
                                             <h5 class="mb-3">Secured Payment</h5>
-                                            <p class="mb-0">Compellingly fashion intermandat opportunities e-business fashion intermandated business.</p>
+                                            <p class="mb-0">Shop with confidence knowing that your payment information is secure. We use the latest encryption technologies to protect your transactions and personal data.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -582,116 +398,7 @@
         </section> <!--about us section end-->
 
         @include('footerheader.footer')
-    
-        <!--modal box-->
 
-        <div class="modal fade" id="quickview_modal">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <div class="gstore-product-quick-view bg-white rounded-3 py-6 px-4">
-                            <div class="row align-items-center g-4">
-                                <div class="col-xl-6 align-self-end">
-                                    <div class="quickview-double-slider">
-                                        <div class="quickview-product-slider swiper">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide text-center">
-                                                    <img src="assets/img/products/p-lg-1.png" alt="jam" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide text-center">
-                                                    <img src="assets/img/products/p-lg-2.png" alt="jam" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide text-center">
-                                                    <img src="assets/img/products/p-lg-3.png" alt="jam" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide text-center">
-                                                    <img src="assets/img/products/p-lg-4.png" alt="jam" class="img-fluid">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-thumbnail-slider swiper mt-80">
-                                            <div class="swiper-wrapper">
-                                                <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                                    <img src="assets/img/products/thumb-sm-1.png" alt="jam" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                                    <img src="assets/img/products/thumb-sm-2.png" alt="jam" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                                    <img src="assets/img/products/thumb-sm-3.png" alt="jam" class="img-fluid">
-                                                </div>
-                                                <div class="swiper-slide product-thumb-single rounded-2 d-flex align-items-center justify-content-center">
-                                                    <img src="assets/img/products/thumb-sm-4.png" alt="jam" class="img-fluid">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="product-info">
-                                        <h4 class="mt-1 mb-3">Three Carrot Vegetables <br> Peruvian Cuisine</h4>
-                                        <div class="d-flex align-items-center flex-nowrap star-rating fs-xxs mb-2">
-                                            <ul class="d-flex align-items-center me-2">
-                                                <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                                <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                                <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                                <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                                <li class="text-warning"><i class="fa-solid fa-star"></i></li>
-                                            </ul>
-                                            <span class="flex-shrink-0">(5.2k Reviews)</span>
-                                        </div>
-                                        <div class="pricing mt-2">
-                                            <span class="fw-bold fs-xs text-danger">$140.00</span>
-                                            <span class="fw-bold fs-xs deleted ms-1">$240.00</span>
-                                        </div>
-                                        <div class="widget-title d-flex mt-4">
-                                            <h6 class="mb-1 flex-shrink-0">Description</h6>
-                                            <span class="hr-line w-100 position-relative d-block align-self-end ms-1"></span>
-                                        </div>
-                                        <p class="mb-3">Clicks-and-mortar "outside the bethinking. Interactively disseminate innovative intellectual relationships. </p>
-                                        <ul class="d-flex flex-column gap-2">
-                                            <li><span class="me-2 text-primary"><i class="fa-solid fa-circle-check"></i></span>Natural ingredients</li>
-                                            <li><span class="me-2 text-primary"><i class="fa-solid fa-circle-check"></i></span>Tastes better with milk</li>
-                                            <li><span class="me-2 text-primary"><i class="fa-solid fa-circle-check"></i></span>Vitamins B2, B3, B5 and B6</li>
-                                            <li><span class="me-2 text-primary"><i class="fa-solid fa-circle-check"></i></span>Refrigerate for freshness</li>
-                                        </ul>
-                                        <h6 class="fs-md mb-2 mt-3">Weight:</h6>
-                                        <ul class="product-radio-btn mb-4 d-flex align-items-center gap-2">
-                                            <li>
-                                                <input type="radio" name="weight" value="250g" checked>
-                                                <label>150g</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="weight" value="250g">
-                                                <label>500g</label>
-                                            </li>
-                                            <li>
-                                                <input type="radio" name="weight" value="250g">
-                                                <label>1kg</label>
-                                            </li>
-                                        </ul>
-                                        <div class="d-flex align-items-center gap-4 flex-wrap">
-                                            <div class="product-qty d-flex align-items-center">
-                                                <button class="decrese">-</button>
-                                                <input type="text" value="01">
-                                                <button class="increase">+</button>
-                                            </div>
-                                            <a href="#" class="btn btn-secondary btn-md"><span class="me-2"><i class="fa-solid fa-cart-plus"></i></span>Add to Cart</a>
-                                        </div>
-                                        <div class="categories mt-4">
-                                            <a href="#" class="btn btn-outline btn-sm">Vegetable</a>
-                                            <a href="#" class="btn btn-outline btn-sm">Healthy</a>
-                                            <a href="#" class="btn btn-outline btn-sm">Organic</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!--modal box end-->
 
     </div>
 

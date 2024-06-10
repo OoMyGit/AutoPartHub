@@ -6,80 +6,66 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Hash;
+
 
 class LoginController extends Controller
 {
     public function showLoginForm()
     {
+        if (Session::has('user')){
+            return redirect()->route('index')->with('message', 'You are already logged in');
+        }
         return view('login');
     }
 
     public function login(Request $request)
-    {
-        // Validate the request first
-        $request->validate([
-            'username' => 'required|string',
-            'password' => 'required|string|min:6',
-        ]);
-
-        // Check if the 'remember me' option was checked
+    {   
+        
+        $username = $request->input('username');
+        $password = $request->input('password');
         $remember = $request->has('remember');
+     
+        //dd($username, $password, $remember);
+       
+        $user = DB::table('User')->where('username', $username)->first();
 
-        $user = $request->only("username", "password");
-
-        // Retrieve the user credentials from the database
-        $acc = DB::table(`User`)
-            ->where('username', '=', $user['username'])
-            ->first();
-
-        // Debug output
-        dd($acc);
-
-        if($acc !== null){
-            if (password_verify($request->password, $acc->password)) {
-
-                if ($remember == true) {
-                    // Set cookies for username and user ID (not password)
-                    Cookie::queue('username', $acc->username, 60 * 24 * 7);
-                    Cookie::queue('id_user', $acc->id_user, 60 * 24 * 7);
-                } else {
-                    // Store user ID in the session
-                    Session::put('id_user', $acc->id_user);
-                    Session::put('username', $acc->username);
-                }
-    
-                return view('index');
-            } else {
-                return redirect('login')->withErrors(['error' => 'Login Failed! Please Try Again.']);
+        if ($user && ($password== $user->password)) {
+          
+            if ($remember) {
+              
+                Cookie::queue('remember_me', $username, 120); 
             }
-            return redirect('login')->withErrors(['error' => 'Login Failed! User Not Found Please Sign Up.']);
+            
+         
+            Session::put('user', $user);
+
+            return redirect()->route('index')->with('message', 'login success!');
         }
+        else {
+            return back()->withErrors([
+                'username' => 'The provided credentials do not match our records.',
+            ]);
+        }
+        
+
 
     }
-
-    public static function getUserID()
-    {
-        if (Session::get('id_user') != null) {
-            $id = Session::get('id_user');
-        } else if (Cookie::get('id_user') != null) {
-            $id = Cookie::get('id_user');
-        }
-
-        return $id;
-    }
-
     public function logout(Request $request)
     {
-        if (Session::has('id_user') || Cookie::get('id_user') != null) {
-            Session::forget('id_user');
-            Session::forget('username');
-            Session::forget('password');
-
-            Cookie::queue(Cookie::forget('id_user'));
-            Cookie::queue(Cookie::forget('username'));
-            Cookie::queue(Cookie::forget('password'));
+       if (Session::has('user')){
+        Session::forget('user');
+        Session::flush();
+       }
+       else {
+        return redirect()->route('login')->with('message', 'Not LOGIN yet');
+       }
+      
+        if (Cookie::get('remember_me')) {
+            Cookie::queue(Cookie::forget('remember_me'));
         }
-        return redirect('/')->with('success', 'Account successfully logged out');
+
+     
+        return redirect()->route('login')->with('message', 'You have been logged out successfully.');
     }
+    
 }

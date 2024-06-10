@@ -38,12 +38,12 @@
     <section class="login-section py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-5 col-12 tt-login-img" data-background="assets/img/banner/login-banner.jpg"></div>
+                <div class="col-lg-5 col-12 tt-login-img" data-background="storage/sparepart.png"></div>
                 <div class="col-lg-5 col-12 bg-white d-flex p-0 tt-login-col shadow">
                     <form class="tt-login-form-wrap p-3 p-md-6 p-lg-6 py-7 w-100" method="POST" action="{{ route('signup.submit') }}">
                         @csrf
                         <div class="text-center mb-7">
-                            <a href="{{ route('index') }}"><img src="assets/img/logo.png" alt="logo"></a>
+                            <a href="{{ route('index') }}"><img src="storage/logo.jpg" alt="logo"></a>
                         </div>
                         <h4 class="mb-3">Get started absolutely free</h4>
                         <p class="fs-xs">Already have an account? <a href="{{ route('login') }}" class="text-secondary">Sign in</a></p>
@@ -61,6 +61,11 @@
                             <div class="col-sm-12">
                                 <div class="input-field">
                                     <input type="email" name="email" placeholder="Email address" class="theme-input" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="input-field">
+                                    <input type="text" name="username" placeholder="Username" class="theme-input" required>
                                 </div>
                             </div>
                             <div class="col-sm-12">

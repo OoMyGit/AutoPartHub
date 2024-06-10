@@ -85,23 +85,13 @@
                             <a href="javascript:void(0)">Products<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
                             <ul>
                                 <li><a href="{{ route('shop-grid') }}">Shop Grid</a></li>
-                                <li><a href="{{ route('shop-grid-2') }}">Shop Grid V2</a></li>
-                                <li><a href="{{ route('product-details') }}">Product Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu">
-                            <a href="javascript:void(0)">Blog<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
-                            <ul>
-                                <li><a href="{{ route('blog-grid') }}">Blog Grid</a></li>
-                                <li><a href="{{ route('blog-listing') }}">Blog List</a></li>
-                                <li><a href="{{ route('blog-details') }}">Blog Details</a></li>
                             </ul>
                         </li>
                         <li class="has-submenu">
                             <a href="javascript:void(0)">Pages<span class="ms-1 fs-xs float-end"><i class="fa-solid fa-angle-right"></i></span></a>
                             <ul>
                                 <li><a href="{{ route('about') }}">About Us</a></li>
-                                        <li><a href="{{ route('my-account') }}">My Account</a></li>
+                                <li><a href="{{ route('my-account') }}">My Account</a></li>
                                 <li><a href="{{ route('cart') }}">Cart</a></li>
                                 <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
                                 <li><a href="{{ route('checkout') }}">Checkout</a></li>
